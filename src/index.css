@@ -127,3 +127,101 @@ body {
   font-size: 1.25rem;
   font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Integrantes Cards*/
+.secao-integrantes {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.titulo-secao {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1C1C1C;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo-secao {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.grid-integrantes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card-integrante {
+  background-color: #FFFFFF;
+  border: 1px solid #E0D9C8;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card-foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #D35400;
+}
+
+.card-nome {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1C1C1C;
+  margin-bottom: 0.5rem;
+}
+
+.card-info {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.25rem;
+}
+
+.card-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+.btn-link {
+  flex: 1;
+  text-align: center;
+  background-color: #1C1C1C;
+  color: #F4EEDD;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-link:hover {
+  background-color: #D35400;
+}

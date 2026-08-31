@@ -13,25 +13,19 @@ export default function Header({ titulo }: CabecalhoProps) {
   ];
 
   return (
-    <header className="cabecalho">
-      <div className="logo-box">
-        <Link to="/" className="logo-box">
-          <img src={logoGuara} alt="Logo" className="logo-img" />
-          <h1 className="logo-titulo">{titulo}</h1>
-        </Link>
-      </div>
+  <header className="cabecalho">
+    <Link to="/" className="logo-box">
+      <img src={logoGuara} alt="Logo" className="logo-img" />
+      <h1 className="logo-titulo">{titulo}</h1>
+    </Link>
 
-      <nav>
-        <ul className="menu-lista">
-          {itensMenu.map((item, index) => (
-            <li key={index}>
-              <NavLink to={item.path} className="link-menu">
-                {item.label}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
-  );
+    <nav className="menu-lista">
+      {itensMenu.map((item) => (
+        <NavLink key={item.path} to={item.path} className="link-menu">
+          {item.label}
+        </NavLink>
+      ))}
+    </nav>
+  </header>
+);
 }

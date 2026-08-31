@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Integrantes from './Pages/Integrantes'; // 1. Certifique-se de que este import existe
 
 export default function App() {
   const nomeProjeto: string = "Lobo-guará Tech";
@@ -16,7 +17,7 @@ export default function App() {
             <Route path="/sobre" element={<h2 className="titulo-pagina">Sobre o Projeto</h2>} />
             <Route path="/solucao" element={<h2 className="titulo-pagina">Nossa Solução</h2>} />
             <Route path="/faq" element={<h2 className="titulo-pagina">Perguntas Frequentes</h2>} />
-            <Route path="/integrantes" element={<h2 className="titulo-pagina">Integrantes</h2>} />
+            <Route path="/integrantes" element={<Integrantes />} />
             <Route path="/contato" element={<h2 className="titulo-pagina">Contato</h2>} />
           </Routes>
         </main>

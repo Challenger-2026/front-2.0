@@ -7,7 +7,7 @@ export type ItemMenu = {
   path: string;
 };
 
-export type IntegranteType = {
+export type IntegranteProps = {
   nome: string;
   rm: string;
   turma: string;
