@@ -1,16 +1,129 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "tailwindcss";
 
 body {
   background-color: #F4EEDD;
   color: #1C1C1C;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+}
+
+.cabecalho {
+  background-color: #1C1C1C;
+  color: #F4EEDD;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 48px;
+  height: auto;
+}
+
+.logo-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #D35400;
+}
+
+.menu-lista {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.link-menu {
+  color: #F4EEDD;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link-menu:hover {
+  color: #D35400;
+}.cabecalho {
+  background-color: #1C1C1C;
+  color: #F4EEDD;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 48px;
+  height: auto;
+}
+
+.logo-titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #D35400;
+}
+
+.menu-lista {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.link-menu {
+  color: #F4EEDD;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link-menu:hover {
+  color: #D35400;
+}
+
+
+
+.rodape {
+  background-color: #1C1C1C;
+  color: #F4EEDD;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2.5rem;
+}
+
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #F4EEDD;
+  color: #1C1C1C;
+}
+
+.conteudo-principal {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.titulo-pagina {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
 }

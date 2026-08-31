@@ -1,3 +1,12 @@
+export type CabecalhoProps = {
+  titulo: string;
+};
+
+export type ItemMenu = {
+  label: string;
+  path: string;
+};
+
 export type IntegranteType = {
   nome: string;
   rm: string;
