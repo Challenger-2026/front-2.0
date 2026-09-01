@@ -5,6 +5,7 @@ import Integrantes from './Pages/Integrantes';
 import Contato from './Pages/Contato';
 import Faq from './Pages/Faq';
 
+
 export default function App() {
   const nomeProjeto: string = "Lobo-guará Tech";
 
