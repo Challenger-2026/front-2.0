@@ -6,6 +6,7 @@ import foto1 from '../assets/Pic4.png';
 import foto2 from '../assets/Pic2.png';
 import foto3 from '../assets/Pic1.png';
 import foto4 from '../assets/Pic3.png';
+import foto5 from '../assets/Pic5.png';
 
 
 
@@ -44,6 +45,14 @@ export default function Integrantes() {
       github: 'https://github.com',
       linkedin: 'https://linkedin.com',
     },
+    {
+      nome: 'Integrante 5',
+      rm: '550004',
+      turma: '1TDSP',
+      foto: foto5,
+      github: 'https://github.com',
+      linkedin: 'https://linkedin.com',
+    }
     
   ];
 
