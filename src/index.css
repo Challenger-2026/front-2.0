@@ -140,7 +140,7 @@ body {
 
 
 
-/*Integrantes Cards*/
+/** Integrantes Cards*/
 .secao-integrantes {
   max-width: 1100px;
   margin: 0 auto;
@@ -224,4 +224,174 @@ body {
 
 .btn-link:hover {
   background-color: #D35400;
+}
+
+
+
+
+
+
+/** Page Contato - Estilização conforme classname */
+
+
+.contato-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 1050px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+
+.contato-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.contato-info h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #D35400;
+  margin: 0;
+}
+
+.contato-info > p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0;
+}
+
+.contato-dados {
+  background-color: #1C1C1C;
+  color: #F4EEDD;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.contato-dados p {
+  margin: 0;
+}
+
+.contato-dados strong {
+  color: #FFFFFF;
+}
+
+
+.contato-box {
+  flex: 1.1;
+  background-color: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.contato-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.contato-box form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contato-box label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1C1C1C;
+}
+
+.contato-box label span {
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: #777777;
+}
+
+.contato-box input,
+.contato-box textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #D0D0D0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.contato-box input:focus,
+.contato-box textarea:focus {
+  outline: none;
+  border-color: #D35400;
+}
+
+.contato-box textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.contato-box button {
+  align-self: flex-start;
+  background-color: #D35400;
+  color: #FFFFFF;
+  border: 1px solid #1C1C1C;
+  border-radius: 6px;
+  padding: 0.7rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.contato-box button:hover {
+  background-color: #B84300;
+}
+
+
+.msg-erro {
+  background-color: #FDEDEC;
+  color: #C0392B;
+  border: 1px solid #F5B7B1;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.msg-sucesso {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+  border: 1px solid #A5D6A7;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+  .contato-container {
+    flex-direction: column;
+    margin: 1.5rem auto;
+  }
+
+  .contato-box {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+  }
 }

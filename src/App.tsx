@@ -1,11 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Integrantes from './Pages/Integrantes'; // 1. Certifique-se de que este import existe
+import Integrantes from './Pages/Integrantes'; 
+import Contato from './Pages/Contato';
 
 export default function App() {
   const nomeProjeto: string = "Lobo-guará Tech";
 
+
+  
   return (
     <BrowserRouter>
       <div className="app-container">
@@ -13,12 +16,12 @@ export default function App() {
         
         <main className="conteudo-principal">
           <Routes>
-            <Route path="/" element={<h2 className="titulo-pagina">Página Inicial</h2>} />
-            <Route path="/sobre" element={<h2 className="titulo-pagina">Sobre o Projeto</h2>} />
-            <Route path="/solucao" element={<h2 className="titulo-pagina">Nossa Solução</h2>} />
-            <Route path="/faq" element={<h2 className="titulo-pagina">Perguntas Frequentes</h2>} />
+            <Route path="/" element={<h2>Página Inicial</h2>} />
+            <Route path="/sobre" element={<h2>Sobre o Projeto</h2>} />
+            <Route path="/solucao" element={<h2>Nossa Solução</h2>} />
+            <Route path="/faq" element={<h2>Perguntas Frequentes</h2>} />
             <Route path="/integrantes" element={<Integrantes />} />
-            <Route path="/contato" element={<h2 className="titulo-pagina">Contato</h2>} />
+            <Route path="/contato" element={<Contato />} />
           </Routes>
         </main>
 

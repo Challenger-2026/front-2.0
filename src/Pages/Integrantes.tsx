@@ -9,7 +9,7 @@ import foto4 from '../assets/Pic3.png';
 
 
 
-// membros grupo 
+
 export default function Integrantes() {
   const listaIntegrantes: IntegranteProps[] = [
    {
@@ -50,9 +50,7 @@ export default function Integrantes() {
   return (
     <section className="secao-integrantes">
       <h2 className="titulo-secao">Nossa Equipe</h2>
-      <p className="subtitulo-secao">
-        Conheça os desenvolvedores responsáveis pelo projeto Lobo-guará Tech.
-      </p>
+      <p className="subtitulo-secao">A Lobo-guará Tech nasceu com o propósito de unir a inovação tecnológica da Sociedade 5.0 à urgência da preservação ambiental. Nosso objetivo é transformar hábitos ecológicos do dia a dia em uma experiência engajadora e recompensadora através da gamificação. Acreditamos que o desenvolvimento de sistemas deve servir ao bem-estar planetário, provando que linhas de código podem ser ferramentas ativas para proteger nossa biodiversidade e construir um futuro sustentável.</p>
 
       <div className="grid-integrantes">
         {listaIntegrantes.map((integrante) => (
