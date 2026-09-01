@@ -1,5 +1,15 @@
-import type { FaqItemType } from '../types/types';
 import { useState } from 'react';
+import type { FaqItemType } from '../types/types';
+
+
+
+
+
+// ! REVISAR CÓDIGOOOOO !!!!!!!!!!!!!
+
+
+
+
 
 
 
@@ -28,27 +38,36 @@ const listaFaq: FaqItemType[] = [
 ];
 
 export default function Faq() {
-  const [abertoIndex, setAbertoIndex] = useState<number | null>(null);
-
-  function toggleFaq(index: number) {
-    setAbertoIndex(abertoIndex === index ? null : index);
-  }
+  const [aberto, setAberto] = useState<number | null>(null);
 
   return (
-    <section className="faq-container">
-      <h2>Perguntas Frequentes</h2>
-      <p>Tire suas dúvidas sobre nossa plataforma e impacto sustentável.</p>
+    <section className="max-w-4xl mx-auto px-4 py-8">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-orange-600 mb-2">Perguntas Frequentes</h2>
+        <p className="text-stone-600 text-sm">
+          Tire suas dúvidas sobre nossa plataforma e impacto sustentável.
+        </p>
+      </div>
 
-      <div className="faq-lista">
+      <div className="space-y-4">
         {listaFaq.map((item, index) => (
-          <article key={index} className="faq-item">
-            <button type="button" onClick={() => toggleFaq(index)}>
-              <span>{item.pergunta}</span>
-              <span className="faq-icone">{abertoIndex === index ? '−' : '+'}</span>
+          <article
+            key={index}
+            className="bg-white border border-stone-200 rounded-xl overflow-hidden shadow-sm"
+          >
+            <button
+              type="button"
+              onClick={() => setAberto(aberto === index ? null : index)}
+              className="w-full flex items-center justify-between p-5 text-left font-semibold text-stone-800 hover:text-orange-600 transition-colors"
+            >
+              <span className="text-base pr-4">{item.pergunta}</span>
+              <span className="text-xl font-bold text-orange-600">
+                {aberto === index ? '−' : '+'}
+              </span>
             </button>
 
-            {abertoIndex === index && (
-              <div className="faq-resposta">
+            {aberto === index && (
+              <div className="px-5 pb-5 text-stone-600 text-sm leading-relaxed border-t border-stone-100 pt-3">
                 <p>{item.resposta}</p>
               </div>
             )}
