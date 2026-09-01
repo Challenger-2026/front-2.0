@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Integrantes from './Pages/Integrantes'; 
 import Contato from './Pages/Contato';
+import Faq from './Pages/Faq';
 
 export default function App() {
   const nomeProjeto: string = "Lobo-guará Tech";
@@ -19,8 +20,8 @@ export default function App() {
             <Route path="/" element={<h2>Página Inicial</h2>} />
             <Route path="/sobre" element={<h2>Sobre o Projeto</h2>} />
             <Route path="/solucao" element={<h2>Nossa Solução</h2>} />
-            <Route path="/faq" element={<h2>Perguntas Frequentes</h2>} />
-            <Route path="/integrantes" element={<Integrantes />} />
+            <Route path="/faq" element={<Faq/>} />
+            <Route path="/integrantes" element={<Integrantes/>} />
             <Route path="/contato" element={<Contato />} />
           </Routes>
         </main>
