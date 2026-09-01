@@ -34,5 +34,27 @@ export default function Faq() {
     setAbertoIndex(abertoIndex === index ? null : index);
   }
 
-  return null;
+  return (
+    <section className="faq-container">
+      <h2>Perguntas Frequentes</h2>
+      <p>Tire suas dúvidas sobre nossa plataforma e impacto sustentável.</p>
+
+      <div className="faq-lista">
+        {listaFaq.map((item, index) => (
+          <article key={index} className="faq-item">
+            <button type="button" onClick={() => toggleFaq(index)}>
+              <span>{item.pergunta}</span>
+              <span className="faq-icone">{abertoIndex === index ? '−' : '+'}</span>
+            </button>
+
+            {abertoIndex === index && (
+              <div className="faq-resposta">
+                <p>{item.resposta}</p>
+              </div>
+            )}
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
