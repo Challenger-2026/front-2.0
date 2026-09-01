@@ -1,28 +1,25 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Integrantes from './Pages/Integrantes'; 
-import Contato from './Pages/Contato';
-import Faq from './Pages/Faq';
+
+import Integrantes from './pages/Integrantes';
+import Contato from './pages/Contato';
+import Faq from './pages/Faq';
 
 
 export default function App() {
-  const nomeProjeto: string = "Lobo-guará Tech";
+  const nomeProjeto: string = 'Lobo-guará Tech';
 
-
-  
   return (
     <BrowserRouter>
-      <div className="app-container">
+      <div className="min-h-screen flex flex-col bg-amber-50 text-stone-900">
         <Header titulo={nomeProjeto} />
-        
-        <main className="conteudo-principal">
+
+        <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Routes>
-            <Route path="/" element={<h2>Página Inicial</h2>} />
-            <Route path="/sobre" element={<h2>Sobre o Projeto</h2>} />
-            <Route path="/solucao" element={<h2>Nossa Solução</h2>} />
-            <Route path="/faq" element={<Faq/>} />
-            <Route path="/integrantes" element={<Integrantes/>} />
+            
+            <Route path="/faq" element={<Faq />} />
+            <Route path="/integrantes" element={<Integrantes />} />
             <Route path="/contato" element={<Contato />} />
           </Routes>
         </main>
