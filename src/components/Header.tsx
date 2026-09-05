@@ -13,31 +13,49 @@ export default function Header({ titulo }: CabecalhoProps) {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-stone-900 text-amber-50 px-6 py-4 flex items-center justify-between shadow-md">
-     
-      <Link to="/" className="flex items-center gap-3">
-        <img src={logoGuara} alt="Logo" className="w-10 h-10 object-contain" />
-        <h1 className="text-xl font-bold text-orange-500">{titulo}</h1>
-      </Link>
+    <header className="sticky top-0 z-50 bg-stone-900 text-amber-50 px-4 sm:px-6 py-3 sm:py-4 shadow-md">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
+        
+        /* Logo e Titulo */
+        <Link to="/" className="flex items-center gap-3 shrink-0">
+          <img
+            src={logoGuara}
+            alt={`Logo ${titulo}`}
+            className="w-9 h-9 sm:w-10 sm:h-10 object-contain shrink-0"
+          />
+          <h1 className="text-lg sm:text-xl font-bold text-orange-500 whitespace-nowrap">
+            {titulo}
+          </h1>
+        </Link>
 
-     
-      <nav className="flex items-center gap-6">
-        {itensMenu.map((item) => (
-          <NavLink
-            key={item.path}
-            to={item.path}
-            className={({ isActive }) =>
-              `text-sm font-semibold transition-colors ${
-                isActive
-                  ? 'text-orange-500 font-bold border-b-2 border-orange-500 pb-1'
-                  : 'text-amber-50 hover:text-orange-400'
-              }`
-            }
-          >
-            {item.label}
-          </NavLink>
-        ))}
-      </nav>
+
+
+
+
+
+        /* Links de navegacao */
+        <nav
+          aria-label="Navegação principal"
+          className="flex items-center gap-3 sm:gap-6 overflow-x-auto max-w-full pb-1 md:pb-0"
+        >
+          {itensMenu.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              end={item.path === '/'}
+              className={({ isActive }) =>
+                `text-xs sm:text-sm font-semibold whitespace-nowrap transition-colors py-1 ${
+                  isActive
+                    ? 'text-orange-500 font-bold border-b-2 border-orange-500'
+                    : 'text-amber-50 hover:text-orange-400'
+                }`
+              }
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
     </header>
   );
 }
