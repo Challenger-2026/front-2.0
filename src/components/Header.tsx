@@ -16,7 +16,6 @@ export default function Header({ titulo }: CabecalhoProps) {
     <header className="sticky top-0 z-50 bg-stone-900 text-amber-50 px-4 sm:px-6 py-3 sm:py-4 shadow-md">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
         
-        /* Logo e Titulo */
         <Link to="/" className="flex items-center gap-3 shrink-0">
           <img
             src={logoGuara}
@@ -28,12 +27,6 @@ export default function Header({ titulo }: CabecalhoProps) {
           </h1>
         </Link>
 
-
-
-
-
-
-        /* Links de navegacao */
         <nav
           aria-label="Navegação principal"
           className="flex items-center gap-3 sm:gap-6 overflow-x-auto max-w-full pb-1 md:pb-0"
