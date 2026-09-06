@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import CardIntegrante from '../components/CardIntegrante';
 import Botao from '../components/Botao';
@@ -56,20 +56,16 @@ const listaIntegrantes: IntegranteProps[] = [
 export default function Integrantes() {
   const { rm } = useParams<{ rm?: string }>();
   const navigate = useNavigate();
-  const [selecionado, setSelecionado] = useState<IntegranteProps | null>(null);
 
+  // Estado derivado diretamente do parâmetro de rota (elimina cascading render)
+  const selecionado = listaIntegrantes.find((item) => item.rm === rm) ?? null;
+
+  // Efeito colateral exclusivo para sincronizar o título da aba no navegador
   useEffect(() => {
-    if (rm) {
-      const membro = listaIntegrantes.find((item) => item.rm === rm);
-      if (membro) {
-        setSelecionado(membro);
-        document.title = `${membro.nome} | Lobo-guará Tech`;
-        return;
-      }
-    }
-    setSelecionado(null);
-    document.title = 'Integrantes | Lobo-guará Tech';
-  }, [rm]);
+    document.title = selecionado
+      ? `${selecionado.nome} | Lobo-guará Tech`
+      : 'Integrantes | Lobo-guará Tech';
+  }, [selecionado]);
 
   return (
     <main className="w-full max-w-7xl mx-auto px-4 py-6 text-center">
@@ -78,7 +74,6 @@ export default function Integrantes() {
         A Lobo-guará Tech nasceu com o propósito de unir a inovação tecnológica da Sociedade 5.0 à urgência da preservação ambiental. Nosso objetivo é transformar hábitos ecológicos do dia a dia em uma experiência engajadora e recompensadora através da gamificação. Acreditamos que o desenvolvimento de sistemas deve servir ao bem-estar planetário, provando que linhas de código podem ser ferramentas ativas para proteger nossa biodiversidade e construir um futuro sustentável.
       </p>
 
-  
       {selecionado && (
         <article className="max-w-xl mx-auto mb-12 p-6 bg-white border-2 border-orange-500 rounded-2xl shadow-md flex flex-col items-center transition-all duration-300 animate-fade-in">
           <span className="text-xs font-bold text-orange-600 uppercase tracking-widest mb-3">
@@ -100,8 +95,7 @@ export default function Integrantes() {
         </article>
       )}
 
-    
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-items-center items-stretch">
         {listaIntegrantes.map((integrante) => (
           <div
             key={integrante.rm}
@@ -115,7 +109,7 @@ export default function Integrantes() {
                 navigate(`/integrantes/${integrante.rm}`);
               }
             }}
-            className="w-full max-w-[220px] cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] active:scale-95 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-xl"
+            className="w-full max-w-[220px] h-full flex flex-col cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] active:scale-95 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-xl"
           >
             <CardIntegrante
               nome={integrante.nome}

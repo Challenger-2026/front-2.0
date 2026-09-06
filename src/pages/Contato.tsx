@@ -10,7 +10,7 @@ export default function Contato() {
     formState: { errors, isSubmitSuccessful },
   } = useForm<FormContatoInputs>();
 
-  function onSubmit(_dados: FormContatoInputs) {
+  function onSubmit() {
     reset();
   }
 
@@ -19,7 +19,7 @@ export default function Contato() {
       {/* Informações de Contato */}
       <div className="space-y-6">
         <div>
-          <h2 className="text-3xl font-extrabold text-orange-600 mb-2">Fale Conosco</h2>
+          <h1 className="text-3xl font-extrabold text-orange-600 mb-2">Fale Conosco</h1>
           <p className="text-stone-700 text-sm leading-relaxed">
             Conecte-se com a Lobo-guará Tech! Tem dúvidas sobre como funcionam os rankings e medalhas?
             Ou quer saber como sua empresa pode se tornar parceira do nosso ecossistema sustentável?
