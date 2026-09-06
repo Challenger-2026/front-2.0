@@ -29,6 +29,19 @@ export type FaqItemType = {
 
 export type PilarSolucaoType = {
   id: string;
+  icone?: string;
+  titulo: string;
+  descricao: string;
+};
+
+export type TimelineItemProps = {
+  numero: number;
+  titulo: string;
+  descricao: string;
+};
+
+export type ResumoProjeto = {
+  icone: string;
   titulo: string;
   descricao: string;
 };
