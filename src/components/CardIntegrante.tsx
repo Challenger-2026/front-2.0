@@ -16,16 +16,19 @@ export default function CardIntegrante({
   }
 
   return (
-    <article className="group bg-white border border-stone-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-orange-600 transition-all duration-300 flex flex-col items-center text-center">
-      <div className="relative mb-4">
+    <article className="group w-full h-full bg-white border border-stone-200 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-lg hover:border-orange-600 transition-all duration-300 flex flex-col items-center text-center">
+      <div className="relative mb-4 shrink-0">
         <img
           src={foto}
           alt={`Foto de ${nome}`}
-          className="w-28 h-28 rounded-full object-cover border-2 border-stone-100 group-hover:border-orange-600 transition-colors shadow-sm"
+          className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-stone-100 group-hover:border-orange-600 transition-colors shadow-sm"
         />
       </div>
 
-      <h3 className="text-xl font-bold text-stone-900 group-hover:text-orange-600 transition-colors mb-2">
+      <h3
+        title={nome}
+        className="h-14 w-full flex items-center justify-center text-base sm:text-lg font-bold text-stone-900 group-hover:text-orange-600 transition-colors line-clamp-2 leading-snug px-1 mb-2"
+      >
         {nome}
       </h3>
 
@@ -38,7 +41,7 @@ export default function CardIntegrante({
         </p>
       </div>
 
-        {/* Botãoj */}
+
       <div className="grid grid-cols-2 gap-3 w-full mt-auto">
         <a
           href={github}
@@ -56,7 +59,6 @@ export default function CardIntegrante({
           />
         </a>
 
-       
         <a
           href={linkedin}
           target="_blank"
