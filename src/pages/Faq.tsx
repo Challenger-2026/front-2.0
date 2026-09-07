@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { FaqItemType } from '../types/types';
+import FaqItem from '../components/FaqItem';
 
 const listaFaq: FaqItemType[] = [
   {
@@ -37,56 +38,16 @@ export default function Faq() {
       </div>
 
       <div className="space-y-4">
-        {listaFaq.map((item, index) => {
-          const estaAberto = aberto === index;
-
-          return (
-            <article
-              key={index}
-              className={`bg-white border rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md ${
-                estaAberto ? 'border-orange-400 ring-1 ring-orange-200' : 'border-stone-200 hover:border-orange-300'
-              }`}
-            >
-
-              <button
-                type="button"
-                id={`faq-btn-${index}`}
-                aria-expanded={estaAberto}
-                aria-controls={`faq-resp-${index}`}
-                onClick={() => setAberto(estaAberto ? null : index)}
-                className="w-full flex items-center justify-between p-5 text-left font-semibold text-stone-800 hover:text-orange-600 transition-colors cursor-pointer select-none"
-              >
-                <span className="text-base pr-4">{item.pergunta}</span>
-
-
-                <span
-                  aria-hidden="true"
-                  className={`text-2xl font-bold text-orange-600 transition-transform duration-300 inline-block leading-none ${
-                    estaAberto ? 'rotate-45 text-orange-700' : 'rotate-0'
-                  }`}
-                >
-                  +
-                </span>
-              </button>
-
-
-              <div
-                id={`faq-resp-${index}`}
-                role="region"
-                aria-labelledby={`faq-btn-${index}`}
-                className={`grid transition-all duration-300 ease-in-out ${
-                  estaAberto ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-                }`}
-              >
-                <div className="overflow-hidden">
-                  <div className="px-5 pb-5 text-stone-600 text-sm leading-relaxed border-t border-stone-100 pt-3">
-                    <p>{item.resposta}</p>
-                  </div>
-                </div>
-              </div>
-            </article>
-          );
-        })}
+        {listaFaq.map((item, index) => (
+          <FaqItem
+            key={index}
+            indice={index}
+            pergunta={item.pergunta}
+            resposta={item.resposta}
+            estaAberto={aberto === index}
+            aoAlternar={() => setAberto(aberto === index ? null : index)}
+          />
+        ))}
       </div>
     </main>
   );
