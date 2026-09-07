@@ -10,7 +10,8 @@ export default function Contato() {
     formState: { errors, isSubmitSuccessful },
   } = useForm<FormContatoInputs>();
 
-  function onSubmit() {
+  function onSubmit(data: FormContatoInputs) {
+    console.log('Mensagem enviada com sucesso:', data);
     reset();
   }
 
@@ -35,7 +36,7 @@ export default function Contato() {
         </address>
       </div>
 
-      {/* Formulário */}
+      {/* Formulário com React Hook Form */}
       <div className="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm">
         {isSubmitSuccessful && (
           <p
@@ -47,6 +48,7 @@ export default function Contato() {
         )}
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
+          {/* Campo Nome */}
           <div>
             <label htmlFor="nome" className="block text-sm font-bold text-stone-900 mb-1">
               Nome Completo:
@@ -57,7 +59,11 @@ export default function Contato() {
               placeholder="Seu nome aqui"
               aria-invalid={errors.nome ? 'true' : 'false'}
               {...register('nome', { required: 'Por favor, informe seu nome completo.' })}
-              className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-orange-600"
+              className={`w-full px-3.5 py-2.5 rounded-lg border text-stone-900 text-sm focus:outline-none transition-colors ${
+                errors.nome
+                  ? 'border-red-500 focus:border-red-600 bg-red-50/20'
+                  : 'border-stone-300 focus:border-orange-600'
+              }`}
             />
             {errors.nome && (
               <span className="text-xs text-red-600 mt-1 block font-medium">
@@ -66,6 +72,7 @@ export default function Contato() {
             )}
           </div>
 
+          {/* Campo E-mail */}
           <div>
             <label htmlFor="email" className="block text-sm font-bold text-stone-900 mb-1">
               E-mail:
@@ -82,7 +89,11 @@ export default function Contato() {
                   message: 'Por favor, insira um endereço de e-mail válido.',
                 },
               })}
-              className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-orange-600"
+              className={`w-full px-3.5 py-2.5 rounded-lg border text-stone-900 text-sm focus:outline-none transition-colors ${
+                errors.email
+                  ? 'border-red-500 focus:border-red-600 bg-red-50/20'
+                  : 'border-stone-300 focus:border-orange-600'
+              }`}
             />
             {errors.email && (
               <span className="text-xs text-red-600 mt-1 block font-medium">
@@ -91,6 +102,7 @@ export default function Contato() {
             )}
           </div>
 
+          {/* Campo Mensagem */}
           <div>
             <label htmlFor="mensagem" className="block text-sm font-bold text-stone-900 mb-1">
               Mensagem:
@@ -100,8 +112,18 @@ export default function Contato() {
               rows={4}
               placeholder="Como podemos ajudar?"
               aria-invalid={errors.mensagem ? 'true' : 'false'}
-              {...register('mensagem', { required: 'A mensagem é obrigatória.' })}
-              className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 text-stone-900 text-sm focus:outline-none focus:border-orange-600 resize-none"
+              {...register('mensagem', {
+                required: 'A mensagem é obrigatória.',
+                minLength: {
+                  value: 10,
+                  message: 'A mensagem deve conter no mínimo 10 caracteres.',
+                },
+              })}
+              className={`w-full px-3.5 py-2.5 rounded-lg border text-stone-900 text-sm focus:outline-none resize-none transition-colors ${
+                errors.mensagem
+                  ? 'border-red-500 focus:border-red-600 bg-red-50/20'
+                  : 'border-stone-300 focus:border-orange-600'
+              }`}
             />
             {errors.mensagem && (
               <span className="text-xs text-red-600 mt-1 block font-medium">
@@ -110,7 +132,7 @@ export default function Contato() {
             )}
           </div>
 
-          <Botao tipo="submit">
+          <Botao tipo="submit" className="w-full sm:w-auto">
             Enviar Mensagem
           </Botao>
         </form>
