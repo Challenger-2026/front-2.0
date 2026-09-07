@@ -1,13 +1,8 @@
 import { Link } from 'react-router-dom';
-import CardMini from '../components/CardMini';
+import CardMini, { type CardMiniProps } from '../components/CardMini';
+import Botao from '../components/Botao';
 
-export interface ResumoProjeto {
-  icone: string;
-  titulo: string;
-  descricao: string;
-}
-
-const listaResumo: ResumoProjeto[] = [
+const listaResumo: CardMiniProps[] = [
   {
     icone: '🌿',
     titulo: 'Descrição',
@@ -31,7 +26,7 @@ const listaResumo: ResumoProjeto[] = [
 export default function Home() {
   return (
     <main className="w-full max-w-6xl mx-auto px-4 py-12 flex flex-col items-center">
-  
+      
       <section aria-labelledby="hero-title" className="text-center max-w-4xl mx-auto mb-20">
         <h1
           id="hero-title"
@@ -44,15 +39,15 @@ export default function Home() {
           Transformamos ações sustentáveis em recompensas reais unindo gamificação, tecnologia e hábitos sustentáveis.
         </p>
 
-        <Link
-          to="/sobre"
-          className="inline-block bg-[#D35400] hover:bg-[#b84500] text-white font-semibold px-8 py-3 rounded-lg shadow transition-colors text-base"
-        >
-          Conheça o Projeto
+        {/* Reutilização do componente Botao */}
+        <Link to="/sobre">
+          <Botao variante="primario" className="px-8 py-3 text-base">
+            Conheça o Projeto
+          </Botao>
         </Link>
       </section>
 
-    
+      
       <section aria-labelledby="resumo-title" className="w-full">
         <h2
           id="resumo-title"
