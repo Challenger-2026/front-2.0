@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import TimelineItem from '../components/TimelineItem';
 
 export interface CardSolucaoItem {
@@ -61,9 +62,14 @@ const etapasRoadmap: EtapaRoadmap[] = [
 ];
 
 export default function Sobre() {
+  useEffect(() => {
+    document.title = 'Sobre Nós | Lobo-guará Tech';
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="w-full max-w-5xl mx-auto px-4 py-10 space-y-16">
-
+      {/* Contexto e Problema */}
       <section aria-labelledby="contexto-title" className="space-y-4">
         <div>
           <span className="text-xs font-bold tracking-widest text-[#D35400] uppercase block mb-1">
@@ -103,7 +109,7 @@ export default function Sobre() {
         </div>
       </section>
 
-
+      
       <section aria-labelledby="solucao-title" className="space-y-6">
         <div>
           <span className="text-xs font-bold tracking-widest text-[#D35400] uppercase block mb-1">
@@ -133,7 +139,7 @@ export default function Sobre() {
         </div>
       </section>
 
-
+      {/* Linha do Tempo e Roadmap */}
       <section aria-labelledby="roadmap-title" className="space-y-6">
         <div>
           <span className="text-xs font-bold tracking-widest text-[#D35400] uppercase block mb-1">
