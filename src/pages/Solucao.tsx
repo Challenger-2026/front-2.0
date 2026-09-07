@@ -1,11 +1,14 @@
-interface CardSolucao {
+import { useEffect } from 'react';
+import CardPilar from '../components/CardPilar';
+
+export interface CardSolucao {
   id: string;
   icone: string;
   titulo: string;
   descricao: string;
 }
 
-interface EtapaRanking {
+export interface EtapaRanking {
   numero: number;
   titulo: string;
   descricao: string;
@@ -75,9 +78,14 @@ const listaEtapas: EtapaRanking[] = [
 ];
 
 export default function Solucao() {
+  useEffect(() => {
+    document.title = 'Nossa Solução | Lobo-guará Tech';
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="w-full max-w-6xl mx-auto px-4 py-12 flex flex-col items-center">
-    
+      {/* Apresentação do Ecossistema */}
       <section className="text-center max-w-4xl mx-auto mb-12">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-stone-900 mb-4">
           O Ecossistema Lobo-guará Tech
@@ -88,7 +96,7 @@ export default function Solucao() {
         </p>
       </section>
 
-
+  
       <section aria-labelledby="pilares-title" className="w-full mb-16">
         <h2 id="pilares-title" className="sr-only">
           Pilares da Solução
@@ -96,23 +104,17 @@ export default function Solucao() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
           {listaCards.map((card) => (
-            <article
+            <CardPilar
               key={card.id}
-              className="bg-white rounded-2xl shadow-md border-t-4 border-[#D35400] p-8 flex flex-col items-center text-center transition-transform hover:-translate-y-1 justify-between"
-            >
-              <div>
-                <span aria-hidden="true" className="text-4xl mb-5 select-none block">
-                  {card.icone}
-                </span>
-                <h3 className="text-xl font-bold text-stone-900 mb-4">{card.titulo}</h3>
-                <p className="text-stone-600 text-sm leading-relaxed mb-6">{card.descricao}</p>
-              </div>
-            </article>
+              icone={card.icone}
+              titulo={card.titulo}
+              descricao={card.descricao}
+            />
           ))}
         </div>
       </section>
 
-
+      {/* Dinâmica de Ranking */}
       <section aria-labelledby="ranking-title" className="w-full bg-[#1C1C1C] rounded-2xl p-8 sm:p-12 text-center text-amber-50 shadow-lg">
         <h2 id="ranking-title" className="text-2xl sm:text-3xl font-extrabold text-[#D35400] mb-3">
           Como funciona a dinâmica de Ranking?
@@ -121,9 +123,9 @@ export default function Solucao() {
           Todo mês, o ciclo se reinicia e os usuários são distribuídos em Ligas Competitivas. Suas ações diárias ditam sua posição no ecossistema:
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <ol className="grid grid-cols-1 md:grid-cols-3 gap-6 list-none">
           {listaEtapas.map((etapa) => (
-            <div
+            <li
               key={etapa.numero}
               className="bg-[#242424] border border-stone-800 rounded-xl p-6 flex flex-col items-center text-center relative"
             >
@@ -134,9 +136,9 @@ export default function Solucao() {
               <p className="text-stone-400 text-xs sm:text-sm leading-relaxed">
                 {etapa.descricao}
               </p>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </section>
     </main>
   );
