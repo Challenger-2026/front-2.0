@@ -1,4 +1,4 @@
-🐺 Lobo-guará Tech | Tecnologia com Rastro de Inovação e Sustentabilidade
+# 🐺 Lobo-guará Tech | Tecnologia com Rastro de Inovação e Sustentabilidade
 
 ## 📄 Descrição do Projeto e Objetivo
 
@@ -93,6 +93,9 @@ O desenvolvimento deste projeto foi idealizado e executado pela equipe de estuda
 
 * **Lucas Fortunato Brandão de Pinho** — RM 572660
   *Turma: 1TDSPI* 👉 [LinkedIn](https://www.linkedin.com/in/lucas-fortunato-317643397/) | 👉 [GitHub](https://github.com/Loutcoun)
+
+* **Nicolas Rodrigues Martins** — RM 573178
+  *Turma: 1TDSPW* 👉 [LinkedIn](https://www.linkedin.com/in/nicolas-rodrigues-martins-126607360/) | 👉 [GitHub](https://github.com/NickRM22)
 
 ## 📸 Imagens e Representação do Projeto
 
