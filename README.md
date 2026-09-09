@@ -103,33 +103,22 @@ Abaixo estão as representações visuais das telas que compõem a plataforma, d
 
 ### 💻 1. Interface Desktop (Página Inicial - Home)
 ![Demonstração da Home Page](src/assets/index1.png)
-![Demonstração da Home Page](src/assets/index2.png)
 *Legenda: Seção principal projetada com contraste refinado, tipografia focada na legibilidade e foco na conversão imediata do usuário para conhecer o projeto.*
 
 ### 📄 2. Página Institucional (Sobre)
 ![Demonstração da Página Sobre](src/assets/sobre1.png)
-![Demonstração da Página Sobre](src/assets/sobre2.png)
-![Demonstração da Página Sobre](src/assets/sobre3.png)
-![Demonstração da Página Sobre](src/assets/sobre4.png)
 *Legenda: Apresentação do contexto e problema, os tipos de solução e um roadmap de desenvolvimento.*
 
 ### 🚀 3. Detalhamento da Funcionalidade (Solução)
 ![Demonstração da Página de Solução](src/assets/solucao1.png)
-![Demonstração da Página de Solução](src/assets/solucao2.png)
-![Demonstração da Página de Solução](src/assets/solucao3.png)
 *Legenda: Explicação detalhada do ecossistema de gamificação, regras e a dinâmica de pontuação.*
 
 ### 📱 4. Componente de FAQ Expandido (FAQ)
 ![Demonstração do FAQ Responsivo](src/assets/faq1.png)
-![Demonstração do FAQ Responsivo](src/assets/faq2.png)
-![Demonstração do FAQ Responsivo](src/assets/faq3.png)
-![Demonstração do FAQ Responsivo](src/assets/faq4.png)
-![Demonstração do FAQ Responsivo](src/assets/faq5.png)
 *Legenda: Menu do tipo Accordion tratando quebras de linhas de forma fluida por meio de componentes React e manipulação dinâmica do estado.*
 
 ### 👥 5. Página do Time (Integrantes)
 ![Demonstração da Página de Integrantes](src/assets/integrantes1.png)
-![Demonstração da Página de Integrantes](src/assets/integrantes2.png)
 *Legenda: Grid responsivo exibindo os cartões dos desenvolvedores com fotos customizadas e links integrados para redes profissionais.*
 
 ### ✉️ 6. Canal de Atendimento e Feedback (Contato)
