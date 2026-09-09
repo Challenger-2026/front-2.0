@@ -15,7 +15,7 @@ export type IntegranteProps = {
   linkedin: string;
   github: string;
   funcao?: string;
-  contribuicao?: string;
+  contribuicao?: string | string[]; 
 };
 
 export type FormContatoInputs = {

@@ -17,7 +17,11 @@ const listaIntegrantes: IntegranteProps[] = [
     turma: '1TDSPI',
     foto: foto1,
     funcao: 'Líder de Projeto',
-    contribuicao: 'Desenvolvimento do Algoritmo de Pontuação e Sistema de Ranking',
+    contribuicao: [
+      'Gestão e Qualidade: Coordenação do fluxo da equipe, controle de prazos e revisão final de código e conformidade dos artefatos.',
+      'Banco de Dados: Modelagem física no Oracle Data Modeler e geração do script DDL com constraints de integridade (PK, FK, CHECK, UNIQUE)',
+      'Engenharia de Software: Validação das regras de negócio e suporte na estruturação dos diagramas de casos de uso e atividades',
+    ],
     github: 'https://github.com/anabautzer',
     linkedin: 'https://www.linkedin.com/in/ana-bautzer/',
   },
@@ -27,7 +31,11 @@ const listaIntegrantes: IntegranteProps[] = [
     turma: '1TDSPI',
     foto: foto2,
     funcao: 'Front-End',
-    contribuicao: 'Desenvolvimento do Algoritmo de Pontuação e Sistema de Ranking',
+    contribuicao: [
+      'Arquitetura e SPA: Migração para React, Vite e TypeScript com rotas dinâmicas via React Router',
+      'Interface e Estilo: Componentização modular e layout 100% responsivo com Tailwind CSS.',
+      'Formulários e Regras: Validação reativa com React Hook Form tipado e acessibilidade semântica',
+    ],
     github: 'https://github.com/duduutech',
     linkedin: 'https://www.linkedin.com/in/duduulimatech/',
   },
@@ -37,7 +45,11 @@ const listaIntegrantes: IntegranteProps[] = [
     turma: '1TDSPI',
     foto: foto3,
     funcao: 'Python',
-    contribuicao: 'Desenvolvimento do Algoritmo de Pontuação e Sistema de Ranking',
+    contribuicao: [
+      'Interface e CRUD: Criação do sistema de menus e submenus interativos para acesso às operações do CRUD.',
+      'Estrutura de Dados: Funções modulares documentadas para organização e filtro de dados em listas de dicionários.',
+      'Tratamento e Validação: Validação de entradas e tratamento de erros de execução com try, except, else e finally.',
+    ],
     github: 'https://github.com/luckz4',
     linkedin: 'https://www.linkedin.com/in/lucas-costa-serrano-647327278/',
   },
@@ -47,7 +59,11 @@ const listaIntegrantes: IntegranteProps[] = [
     turma: '1TDSPI',
     foto: foto4,
     funcao: 'ChatBot e IA',
-    contribuicao: 'Desenvolvimento do Algoritmo de Pontuação e Sistema de Ranking',
+    contribuicao: [
+      'Curadoria do Dataset: Coleta, higienização e estruturação da base de dados tabular aderente ao desafio',
+      'Engenharia de Dados: Mapeamento de atributos de entrada (features), qualidade dos registros e definição do label',
+      'Documentação Técnica: Análise da volumetria, justificativa da origem dos dados e objetivos para o modelo de IA',
+    ],
     github: 'https://github.com/Loutcoun',
     linkedin: 'https://www.linkedin.com/in/lucas-fortunato-317643397/',
   },
@@ -57,7 +73,11 @@ const listaIntegrantes: IntegranteProps[] = [
     turma: '1TDSPW',
     foto: foto5,
     funcao: 'Java',
-    contribuicao: 'Desenvolvimento do Algoritmo de Pontuação e Sistema de Ranking',
+    contribuicao: [
+      'Modelagem & OOP: Estruturação das entidades da camada Model com encapsulamento, construtores e métodos de acesso',
+      'Regras de Negócio: Implementação dos métodos principais com a lógica da solução e classe executável de testes',
+      'Persistência & DAO: Configuração da classe de conexão JDBC e operações completas de CRUD na camada DAO',
+    ],
     github: 'https://github.com/NickRM22',
     linkedin: 'https://www.linkedin.com/in/nicolas-rodrigues-martins-126607360/',
   },
@@ -103,10 +123,24 @@ export default function Integrantes() {
             <p className="text-stone-500 text-xs sm:text-sm mb-4">RM: {selecionado.rm} • Turma: {selecionado.turma}</p>
 
             
-            {selecionado.contribuicao && (
-              <div className="bg-stone-50 border border-stone-200 rounded-xl p-4 mb-6 w-full text-stone-700 text-xs sm:text-sm leading-relaxed text-left sm:text-center">
-                <strong className="text-stone-900 block mb-1">Contribuição no Projeto:</strong>{selecionado.contribuicao}</div>
-      )}
+          {selecionado.contribuicao && (
+            <div className="bg-stone-50 border border-stone-200 rounded-xl p-4 mb-6 w-full text-stone-700 text-xs sm:text-sm text-left">
+              <strong className="text-stone-900 block mb-2 font-bold">Contribuição no Projeto:</strong>
+              <ul className="space-y-1.5">
+                {[selecionado.contribuicao].flat().map((item, idx) => (
+                  <li key={idx} className="flex gap-2">
+                    <span className="text-orange-600 font-bold">•</span>
+                    <span>
+                      {item.includes(':') ? (
+                        <><strong>{item.split(':')[0]}:</strong>{item.slice(item.indexOf(':') + 1)}</>
+                      ) : item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          
+          )}
 
     
       <div className="flex items-center justify-center gap-3 w-full mb-6">
