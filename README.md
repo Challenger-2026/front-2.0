@@ -129,7 +129,7 @@ Abaixo estão as representações visuais das telas que compõem a plataforma, d
 
 O código-fonte completo, histórico de evoluções e versionamento estruturado deste ecossistema web podem ser acessados publicamente no GitHub através do link oficial:
 
-🚀 **[Acesse o Repositório Oficial no GitHub](https://github.com/Challenger-2026/front.git)**
+🚀 **[Acesse o Repositório Oficial no GitHub](https://github.com/Challenger-2026/front-2.0)**
 
 ## 📞 Contato e Suporte
 
