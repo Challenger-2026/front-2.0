@@ -38,7 +38,13 @@ front-2.0-main/
 │   │   ├── Pic2.png             # Foto do integrante 2
 │   │   ├── Pic3.png             # Foto do integrante 3
 │   │   ├── Pic4.png             # Foto do integrante 4
-│   │   └── Pic5.png             # Foto do integrante 5
+│   │   ├── Pic5.png             # Foto do integrante 1
+│   │   ├── index1.png           # Página Inicial - Home
+│   │   ├── sobre1.png           # Sobre
+│   │   ├── solucao1.png         # Solução
+│   │   ├── faq1.png             # FAQ
+│   │   ├── integrantes1.png     # Foto do integrante 4
+│   │   └── contato.png          # contato
 │   │
 │   ├── components/              # Componentes reutilizáveis
 │   │   ├── Botao.tsx            # Botão estilizado reutilizável
