@@ -39,7 +39,7 @@ front-2.0-main/
 │   │   ├── Pic3.png             # Foto do integrante 3
 │   │   ├── Pic4.png             # Foto do integrante 4
 │   │   ├── Pic5.png             # Foto do integrante 1
-│   │   ├── index1.png           # Página Inicial - Home
+│   │   ├── index1.png           # Página Inicial
 │   │   ├── sobre1.png           # Sobre
 │   │   ├── solucao1.png         # Solução
 │   │   ├── faq1.png             # FAQ
