@@ -58,11 +58,15 @@ export default function Contato() {
               type="text"
               placeholder="Seu nome aqui"
               aria-invalid={errors.nome ? 'true' : 'false'}
-              {...register('nome', { required: 'Por favor, informe seu nome completo.' })}
-              className={`w-full px-3.5 py-2.5 rounded-lg border text-stone-900 text-sm focus:outline-none transition-colors ${
-                errors.nome
-                  ? 'border-red-500 focus:border-red-600 bg-red-50/20'
-                  : 'border-stone-300 focus:border-orange-600'
+              {...register('nome', {
+                required: 'Por favor, informe seu nome completo.',
+                minLength: {
+                  value: 3,
+                  message: 'O nome deve conter pelo menos 3 caracteres.',
+                },
+              })}
+              className={`w-full px-3.5 py-2.5 rounded-lg border text-stone-900 text-sm focus:outline-none focus:border-orange-600 ${
+                errors.nome ? 'border-red-500' : 'border-stone-300'
               }`}
             />
             {errors.nome && (
