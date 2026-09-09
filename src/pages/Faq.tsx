@@ -16,7 +16,7 @@ const listaFaq: FaqItemType[] = [
   {
     pergunta: 'Como posso ser um Moderador?',
     resposta:
-      'Para garantir que a distribuição de pontos seja justa e livre de fraudes, o Lobo-guará Tech conta com os Moderadores — membros da própria comunidade que auditam as evidências enviadas. Para se candidatar, você precisa cumprir três pré-requisitos: ter um tempo mínimo de 3 meses e acúmulo de pontos na plataforma, ter uma reputação positiva nas comunidades locais, ser ativo no reporte de irregularidades e realizar o teste de diretrizes e sustentabilidade.',
+      'Para garantir que a distribuição de pontos seja justa e livre de fraudes, o Lobo-guará Tech conta com os Moderadores — membros da própria comunidade que auditam as evidências enviadas. Para se candidatar, você precisa cumprir quatro pré-requisitos: ter um tempo mínimo de 3 meses e acúmulo de pontos na plataforma, ter uma taxa de rejeição de conteúdo abaixo de 10%, ser ativo no reporte de irregularidades e realizar o teste de diretrizes e sustentabilidade.',
   },
   {
     pergunta: 'Como as pontuações funcionam?',

@@ -1,4 +1,4 @@
-# 🐺 Lobo-guará Tech | Tecnologia com Rastro de Inovação e Sustentabilidade
+# Lobo-guará Tech | Tecnologia com Rastro de Inovação e Sustentabilidade
 
 ## 📄 Descrição do Projeto e Objetivo
 
@@ -38,13 +38,13 @@ front-2.0-main/
 │   │   ├── Pic2.png             # Foto do integrante 2
 │   │   ├── Pic3.png             # Foto do integrante 3
 │   │   ├── Pic4.png             # Foto do integrante 4
-│   │   ├── Pic5.png             # Foto do integrante 1
-│   │   ├── index1.png           # Página Inicial
-│   │   ├── sobre1.png           # Sobre
-│   │   ├── solucao1.png         # Solução
-│   │   ├── faq1.png             # FAQ
-│   │   ├── integrantes1.png     # Foto do integrante 4
-│   │   └── contato.png          # contato
+│   │   ├── Pic5.png             # Foto do integrante 5
+│   │   ├── index1.png           # Foto da página inicial - Home
+│   │   ├── sobre1.png           # Foto da página Sobre
+│   │   ├── solucao1.png         # Foto da página Solução
+│   │   ├── faq1.png             # Foto da página FAQ
+│   │   ├── integrantes1.png     # Foto da página integrantes
+│   │   └── contato.png          # Foto da página Contato
 │   │
 │   ├── components/              # Componentes reutilizáveis
 │   │   ├── Botao.tsx            # Botão estilizado reutilizável
@@ -58,7 +58,7 @@ front-2.0-main/
 │   │
 │   ├── pages/                   # Páginas da aplicação
 │   │   ├── Home.tsx             # Página Inicial
-│   │   ├── Sobre.tsx            # Página Institucional
+│   │   ├── Sobre.tsx            # Página Sobre
 │   │   ├── Solucao.tsx          # Página de Solução
 │   │   ├── Faq.tsx              # Página de Dúvidas Frequentes
 │   │   ├── Integrantes.tsx      # Página dos Integrantes
