@@ -97,7 +97,7 @@ O desenvolvimento deste projeto foi idealizado e executado pela equipe de estuda
 * **Lucas Costa Serrano** — RM 571016
   *Turma: 1TDSPI* 👉 [LinkedIn](https://www.linkedin.com/in/lucas-costa-serrano-647327278/) | 👉 [GitHub](https://github.com/luckz4)
 
-* **Lucas Fortunato Brandão de Pinho** — RM 572660
+* **Lucas Fortunato Brandão de Pinho** — RM 572860
   *Turma: 1TDSPI* 👉 [LinkedIn](https://www.linkedin.com/in/lucas-fortunato-317643397/) | 👉 [GitHub](https://github.com/Loutcoun)
 
 * **Nicolas Rodrigues Martins** — RM 573178
