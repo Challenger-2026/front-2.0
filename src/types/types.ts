@@ -14,6 +14,8 @@ export type IntegranteProps = {
   foto: string;
   linkedin: string;
   github: string;
+  funcao?: string;
+  contribuicao?: string;
 };
 
 export type FormContatoInputs = {

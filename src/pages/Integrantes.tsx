@@ -12,42 +12,52 @@ import foto5 from '../assets/Pic5.png';
 
 const listaIntegrantes: IntegranteProps[] = [
   {
-    nome: 'Ana Bautzer',
+    nome: 'Ana Carolina Orcelli Bautzer',
     rm: '570281',
-    turma: '1TDSP',
+    turma: '1TDSPI',
     foto: foto1,
+    funcao: 'Líder de Projeto',
+    contribuicao: 'Desenvolvimento do Algoritmo de Pontuação e Sistema de Ranking',
     github: 'https://github.com/anabautzer',
     linkedin: 'https://www.linkedin.com/in/ana-bautzer/',
   },
   {
-    nome: 'Eduardo Souza',
+    nome: 'Eduardo Lima de Souza',
     rm: '570412',
-    turma: '1TDSP',
+    turma: '1TDSPI',
     foto: foto2,
+    funcao: 'Front-End',
+    contribuicao: 'Desenvolvimento do Algoritmo de Pontuação e Sistema de Ranking',
     github: 'https://github.com/duduutech',
     linkedin: 'https://www.linkedin.com/in/duduulimatech/',
   },
   {
-    nome: 'Lucas Costa',
+    nome: 'Lucas Costa Serrano ',
     rm: '571016',
-    turma: '1TDSP',
+    turma: '1TDSPI',
     foto: foto3,
+    funcao: 'Python',
+    contribuicao: 'Desenvolvimento do Algoritmo de Pontuação e Sistema de Ranking',
     github: 'https://github.com/luckz4',
     linkedin: 'https://www.linkedin.com/in/lucas-costa-serrano-647327278/',
   },
   {
-    nome: 'Lucas Fortunato',
+    nome: 'Lucas Fortunato Brandão de Pinho',
     rm: '572860',
-    turma: '1TDSP',
+    turma: '1TDSPI',
     foto: foto4,
+    funcao: 'ChatBot e IA',
+    contribuicao: 'Desenvolvimento do Algoritmo de Pontuação e Sistema de Ranking',
     github: 'https://github.com/Loutcoun',
     linkedin: 'https://www.linkedin.com/in/lucas-fortunato-317643397/',
   },
   {
-    nome: 'Nicolas Martins',
+    nome: 'Nicolas Rodrigues Martins',
     rm: '573178',
-    turma: '1TDSP',
+    turma: '1TDSPW',
     foto: foto5,
+    funcao: 'Java',
+    contribuicao: 'Desenvolvimento do Algoritmo de Pontuação e Sistema de Ranking',
     github: 'https://github.com/NickRM22',
     linkedin: 'https://www.linkedin.com/in/nicolas-rodrigues-martins-126607360/',
   },
@@ -75,25 +85,54 @@ export default function Integrantes() {
       </p>
 
       {selecionado && (
-        <article className="max-w-xl mx-auto mb-12 p-6 bg-white border-2 border-orange-500 rounded-2xl shadow-md flex flex-col items-center transition-all duration-300 animate-fade-in">
-          <span className="text-xs font-bold text-orange-600 uppercase tracking-widest mb-3">
-            Integrante em Destaque
-          </span>
-          <img
-            src={selecionado.foto}
-            alt={`Foto de ${selecionado.nome}`}
-            className="w-24 h-24 rounded-full object-cover border-2 border-orange-500 mb-3 shadow"
-          />
-          <h2 className="text-xl font-bold text-stone-900">{selecionado.nome}</h2>
-          <p className="text-stone-600 text-xs sm:text-sm mb-4">
-            RM: {selecionado.rm} • Turma: {selecionado.turma}
-          </p>
+          <article className="max-w-xl mx-auto mb-12 p-6 sm:p-8 bg-white border-2 border-orange-500 rounded-2xl shadow-lg flex flex-col items-center transition-all duration-300 animate-fade-in text-center">
+            <span className="text-xs font-bold text-orange-600 uppercase tracking-widest mb-3">Integrante em Destaque</span>
 
-          <Botao acao={() => navigate('/integrantes')} variante="secundario">
-            Limpar Destaque / Ver Todos
-          </Botao>
-        </article>
+            <img
+              src={selecionado.foto}
+              alt={`Foto de ${selecionado.nome}`}
+              className="w-28 h-28 rounded-full object-cover border-4 border-orange-500 mb-3 shadow"
+            />
+
+            <h2 className="text-2xl font-bold text-stone-900">{selecionado.nome}</h2>
+            
+            <span className="text-xs font-semibold bg-orange-100 text-orange-800 px-3 py-1 rounded-full mt-1 mb-2">
+              {selecionado.funcao || 'Membro do Projeto'}
+            </span>
+
+            <p className="text-stone-500 text-xs sm:text-sm mb-4">RM: {selecionado.rm} • Turma: {selecionado.turma}</p>
+
+            
+            {selecionado.contribuicao && (
+              <div className="bg-stone-50 border border-stone-200 rounded-xl p-4 mb-6 w-full text-stone-700 text-xs sm:text-sm leading-relaxed text-left sm:text-center">
+                <strong className="text-stone-900 block mb-1">Contribuição no Projeto:</strong>{selecionado.contribuicao}</div>
       )}
+
+    
+      <div className="flex items-center justify-center gap-3 w-full mb-6">
+        <a
+          href={selecionado.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`GitHub de ${selecionado.nome}`}
+          className="flex-1 py-2 px-4 rounded-lg bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold transition-colors duration-200"
+        >
+          GitHub
+        </a>
+        <a
+          href={selecionado.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`LinkedIn de ${selecionado.nome}`}
+          className="flex-1 py-2 px-4 rounded-lg bg-[#0077b5] hover:bg-[#006097] text-white text-xs font-semibold transition-colors duration-200"
+        >
+          LinkedIn
+        </a>
+      </div>
+
+      <Botao acao={() => navigate('/integrantes')} variante="secundario">Limpar Destaque </Botao>
+    </article>
+  )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-items-center items-stretch">
         {listaIntegrantes.map((integrante) => (
