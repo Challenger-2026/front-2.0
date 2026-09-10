@@ -18,7 +18,7 @@ export default function Botao({
   className = '',
 }: BotaoProps) {
   const base =
-    'px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-200 inline-flex items-center justify-center select-none active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100 cursor-pointer';
+    'wave-button px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-200 inline-flex items-center justify-center select-none active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100 cursor-pointer';
 
   const variantes = {
     primario: 'bg-[#D35400] hover:bg-[#b84500] text-white shadow-sm hover:shadow',

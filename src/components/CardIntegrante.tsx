@@ -50,7 +50,7 @@ export default function CardIntegrante({
           onClick={barrarPropagacao}
           aria-label={`GitHub de ${nome}`}
           title="GitHub"
-          className="py-2.5 bg-stone-900 hover:bg-black rounded-xl transition-all shadow-sm active:scale-95 flex items-center justify-center border border-stone-800"
+          className="wave-button py-2.5 bg-stone-900 hover:bg-black rounded-xl transition-all shadow-sm active:scale-95 flex items-center justify-center border border-stone-800"
         >
           <img
             src={iconeGithub}
@@ -66,7 +66,7 @@ export default function CardIntegrante({
           onClick={barrarPropagacao}
           aria-label={`LinkedIn de ${nome}`}
           title="LinkedIn"
-          className="py-2.5 bg-[#0A66C2] hover:bg-[#084e96] rounded-xl transition-all shadow-sm active:scale-95 flex items-center justify-center border border-[#0A66C2]"
+          className="wave-button py-2.5 bg-[#0A66C2] hover:bg-[#084e96] rounded-xl transition-all shadow-sm active:scale-95 flex items-center justify-center border border-[#0A66C2]"
         >
           <img
             src={iconeLinkedin}

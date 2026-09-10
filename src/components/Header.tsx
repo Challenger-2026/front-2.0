@@ -14,7 +14,7 @@ export default function Header({ titulo }: CabecalhoProps) {
 
   return (
     <header className="sticky top-0 z-50 bg-stone-900 text-amber-50 px-4 sm:px-6 py-3 sm:py-4 shadow-md">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-4">
         
         <Link to="/" className="flex items-center gap-3 shrink-0">
           <img
@@ -29,7 +29,7 @@ export default function Header({ titulo }: CabecalhoProps) {
 
         <nav
           aria-label="Navegação principal"
-          className="flex items-center gap-3 sm:gap-6 overflow-x-auto max-w-full pb-1 md:pb-0"
+          className="navbar"
         >
           {itensMenu.map((item) => (
             <NavLink
@@ -37,7 +37,7 @@ export default function Header({ titulo }: CabecalhoProps) {
               to={item.path}
               end={item.path === '/'}
               className={({ isActive }) =>
-                `text-xs sm:text-sm font-semibold whitespace-nowrap transition-colors py-1 ${
+                `wave-button text-xs sm:text-sm font-semibold whitespace-nowrap transition-colors py-1 ${
                   isActive
                     ? 'text-orange-500 font-bold border-b-2 border-orange-500'
                     : 'text-amber-50 hover:text-orange-400'

@@ -25,7 +25,7 @@ export default function FaqItem({
         aria-expanded={estaAberto}
         aria-controls={`faq-resp-${indice}`}
         onClick={aoAlternar}
-        className="w-full flex items-center justify-between p-5 text-left font-semibold text-stone-800 hover:text-orange-600 transition-colors cursor-pointer select-none"
+        className="wave-button w-full flex items-center justify-between p-5 text-left font-semibold text-stone-800 hover:text-orange-600 transition-colors cursor-pointer select-none"
       >
         <span className="text-base pr-4">{pergunta}</span>
         <span

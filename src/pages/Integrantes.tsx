@@ -149,7 +149,7 @@ export default function Integrantes() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`GitHub de ${selecionado.nome}`}
-          className="flex-1 py-2 px-4 rounded-lg bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold transition-colors duration-200"
+          className="wave-button flex-1 py-2 px-4 rounded-lg bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold transition-colors duration-200"
         >
           GitHub
         </a>
@@ -158,7 +158,7 @@ export default function Integrantes() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`LinkedIn de ${selecionado.nome}`}
-          className="flex-1 py-2 px-4 rounded-lg bg-[#0077b5] hover:bg-[#006097] text-white text-xs font-semibold transition-colors duration-200"
+          className="wave-button flex-1 py-2 px-4 rounded-lg bg-[#0077b5] hover:bg-[#006097] text-white text-xs font-semibold transition-colors duration-200"
         >
           LinkedIn
         </a>
