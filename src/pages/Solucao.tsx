@@ -81,13 +81,15 @@ export default function Solucao() {
     <main className="w-full max-w-6xl mx-auto px-4 py-12 flex flex-col items-center">
       {/* Apresentação do Ecossistema */}
       <section className="text-center max-w-4xl mx-auto mb-12">
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-stone-900 mb-4">
-          O Ecossistema Lobo-guará Tech
-        </h1>
-        <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
-          Nossa plataforma vai além de um aplicativo de tarefas: criamos uma{' '}
-          <strong className="text-stone-900 font-semibold">rede de impacto socioambiental</strong>. Através da união entre tecnologia, validação comunitária e incentivos reais, transformamos a conscientização ecológica em hábitos diários e mensuráveis.
-        </p>
+        <div className="relative z-10 bg-[#fffbed]/90 rounded-2xl px-6 py-6 md:px-10 md:py-8">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-stone-900 mb-4">
+            O Ecossistema Lobo-guará Tech
+          </h1>
+          <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
+            Nossa plataforma vai além de um aplicativo de tarefas: criamos uma{' '}
+            <strong className="text-stone-900 font-semibold">rede de impacto socioambiental</strong>. Através da união entre tecnologia, validação comunitária e incentivos reais, transformamos a conscientização ecológica em hábitos diários e mensuráveis.
+          </p>
+        </div>
       </section>
 
   

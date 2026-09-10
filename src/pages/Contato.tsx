@@ -19,7 +19,7 @@ export default function Contato() {
     <main className="max-w-5xl mx-auto p-4 sm:p-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
       {/* Informações de Contato */}
       <div className="space-y-6">
-        <div>
+        <div className="relative z-10 bg-[#fffbed]/90 rounded-2xl px-6 py-5">
           <h1 className="text-3xl font-extrabold text-orange-600 mb-2">Fale Conosco</h1>
           <p className="text-stone-700 text-sm leading-relaxed">
             Conecte-se com a Lobo-guará Tech! Tem dúvidas sobre como funcionam os rankings e
@@ -44,8 +44,8 @@ export default function Contato() {
 
       {/* Formulário com React Hook Form */}
       <div className="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm">
-        <p id="aviso-formulario" className="mb-5 text-sm text-stone-600">
-          Formulário de demonstração: os campos são validados, mas a mensagem ainda não é enviada.
+        <p id="aviso-formulario" className="mb-5 text-sm text-stone-600 text-center">
+          Formulário de demonstração
         </p>
 
         {mensagemValidada && (
@@ -164,7 +164,7 @@ export default function Contato() {
           </div>
 
           <Botao tipo="submit" className="w-full sm:w-auto">
-            Validar Mensagem
+            Enviar mensagem
           </Botao>
         </form>
       </div>

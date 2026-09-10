@@ -19,8 +19,8 @@ const listaIntegrantes: IntegranteProps[] = [
     funcao: 'Líder de Projeto',
     contribuicao: [
       'Gestão e Qualidade: Coordenação do fluxo da equipe, controle de prazos e revisão final de código e conformidade dos artefatos.',
-      'Banco de Dados: Modelagem física no Oracle Data Modeler e geração do script DDL com constraints de integridade (PK, FK, CHECK, UNIQUE)',
-      'Engenharia de Software: Validação das regras de negócio e suporte na estruturação dos diagramas de casos de uso e atividades',
+      'Banco de Dados: Modelagem física no Oracle Data Modeler e geração do script DDL com constraints de integridade (PK, FK, CHECK, UNIQUE).',
+      'Engenharia de Software: Validação das regras de negócio e suporte na estruturação dos diagramas de casos de uso e atividades.',
     ],
     github: 'https://github.com/anabautzer',
     linkedin: 'https://www.linkedin.com/in/ana-bautzer/',
@@ -32,9 +32,9 @@ const listaIntegrantes: IntegranteProps[] = [
     foto: foto2,
     funcao: 'Front-End',
     contribuicao: [
-      'Arquitetura e SPA: Migração para React, Vite e TypeScript com rotas dinâmicas via React Router',
+      'Arquitetura e SPA: Migração para React, Vite e TypeScript com rotas dinâmicas via React Router.',
       'Interface e Estilo: Componentização modular e layout 100% responsivo com Tailwind CSS.',
-      'Formulários e Regras: Validação reativa com React Hook Form tipado e acessibilidade semântica',
+      'Formulários e Regras: Validação reativa com React Hook Form tipado e acessibilidade semântica.',
     ],
     github: 'https://github.com/duduutech',
     linkedin: 'https://www.linkedin.com/in/duduulimatech/',
@@ -60,9 +60,9 @@ const listaIntegrantes: IntegranteProps[] = [
     foto: foto4,
     funcao: 'ChatBot e IA',
     contribuicao: [
-      'Curadoria do Dataset: Coleta, higienização e estruturação da base de dados tabular aderente ao desafio',
-      'Engenharia de Dados: Mapeamento de atributos de entrada (features), qualidade dos registros e definição do label',
-      'Documentação Técnica: Análise da volumetria, justificativa da origem dos dados e objetivos para o modelo de IA',
+      'Curadoria do Dataset: Coleta, higienização e estruturação da base de dados tabular aderente ao desafio.',
+      'Engenharia de Dados: Mapeamento de atributos de entrada (features), qualidade dos registros e definição do label.',
+      'Documentação Técnica: Análise da volumetria, justificativa da origem dos dados e objetivos para o modelo de IA.',
     ],
     github: 'https://github.com/Loutcoun',
     linkedin: 'https://www.linkedin.com/in/lucas-fortunato-317643397/',
@@ -74,9 +74,9 @@ const listaIntegrantes: IntegranteProps[] = [
     foto: foto5,
     funcao: 'Java',
     contribuicao: [
-      'Modelagem & OOP: Estruturação das entidades da camada Model com encapsulamento, construtores e métodos de acesso',
-      'Regras de Negócio: Implementação dos métodos principais com a lógica da solução e classe executável de testes',
-      'Persistência & DAO: Configuração da classe de conexão JDBC e operações completas de CRUD na camada DAO',
+      'Modelagem & OOP: Estruturação das entidades da camada Model com encapsulamento, construtores e métodos de acesso.',
+      'Regras de Negócio: Implementação dos métodos principais com a lógica da solução e classe executável de testes.',
+      'Persistência & DAO: Configuração da classe de conexão JDBC e operações completas de CRUD na camada DAO.',
     ],
     github: 'https://github.com/NickRM22',
     linkedin: 'https://www.linkedin.com/in/nicolas-rodrigues-martins-126607360/',
@@ -100,7 +100,7 @@ export default function Integrantes() {
   return (
     <main className="w-full max-w-7xl mx-auto px-4 py-6 text-center">
       <h1 className="text-3xl font-bold text-orange-600 mb-3">Nossa Equipe</h1>
-      <p className="text-stone-700 text-sm max-w-3xl mx-auto leading-relaxed mb-8">
+      <p className="equipe-intro text-stone-700 text-sm max-w-3xl mx-auto leading-relaxed mb-8">
         A Lobo-guará Tech nasceu com o propósito de unir a inovação tecnológica da Sociedade 5.0 à
         urgência da preservação ambiental. Nosso objetivo é transformar hábitos ecológicos do dia a
         dia em uma experiência engajadora e recompensadora através da gamificação. Acreditamos que o

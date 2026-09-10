@@ -65,7 +65,7 @@ export default function Sobre() {
     <main className="w-full max-w-5xl mx-auto px-4 py-10 space-y-16">
       {/* Contexto e Problema */}
       <section aria-labelledby="contexto-title" className="space-y-4">
-        <div>
+        <div className="relative z-10 inline-block bg-[#fffbed]/90 rounded-xl px-4 py-2">
           <span className="text-xs font-bold tracking-widest text-[#D35400] uppercase block mb-1">
             O Desafio
           </span>
@@ -105,7 +105,7 @@ export default function Sobre() {
 
       
       <section aria-labelledby="solucao-title" className="space-y-6">
-        <div>
+        <div className="relative z-10 inline-block bg-[#fffbed]/90 rounded-xl px-4 py-2">
           <span className="text-xs font-bold tracking-widest text-[#D35400] uppercase block mb-1">
             Nossa Resposta
           </span>
@@ -135,7 +135,7 @@ export default function Sobre() {
 
       {/* Linha do Tempo e Roadmap */}
       <section aria-labelledby="roadmap-title" className="space-y-6">
-        <div>
+        <div className="relative z-10 inline-block bg-[#fffbed]/90 rounded-xl px-4 py-2">
           <span className="text-xs font-bold tracking-widest text-[#D35400] uppercase block mb-1">
             Próximos Passos
           </span>

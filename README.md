@@ -50,16 +50,17 @@ front-2.0-main/
 │   │   ├── github.svg           # Ícone do GitHub
 │   │   ├── linkedin.svg         # Ícone do LinkedIn
 │   │   ├── Guara.png            # Logotipo oficial Lobo-guará Tech
+│   │   ├── papel-fundo.jpg      # Papel de parede
 │   │   ├── Pic1.png             # Foto do integrante 1
 │   │   ├── Pic2.png             # Foto do integrante 2
 │   │   ├── Pic3.png             # Foto do integrante 3
 │   │   ├── Pic4.png             # Foto do integrante 4
 │   │   ├── Pic5.png             # Foto do integrante 5
-│   │   ├── index1.png           # Foto da página inicial - Home
-│   │   ├── sobre1.png           # Foto da página Sobre
-│   │   ├── solucao1.png         # Foto da página Solução
-│   │   ├── faq1.png             # Foto da página FAQ
-│   │   ├── integrantes1.png     # Foto da página integrantes
+│   │   ├── index.png            # Foto da página inicial - Home
+│   │   ├── sobre.png            # Foto da página Sobre
+│   │   ├── solucao.png          # Foto da página Solução
+│   │   ├── faq.png              # Foto da página FAQ
+│   │   ├── integrantes.png      # Foto da página integrantes
 │   │   └── contato.png          # Foto da página Contato
 │   │
 │   ├── components/              # Componentes reutilizáveis
@@ -124,23 +125,23 @@ O desenvolvimento deste projeto foi idealizado e executado pela equipe de estuda
 Abaixo estão as representações visuais das telas que compõem a plataforma, demonstrando a consistência do design, o uso estratégico da paleta de cores institucional e a aplicação de técnicas avançadas de responsividade. As imagens estão localizadas na pasta `src/assets`.
 
 ### 💻 1. Interface Desktop (Página Inicial - Home)
-![Demonstração da Home Page](src/assets/index1.png)
+![Demonstração da Home Page](src/assets/index.png)
 *Legenda: Seção principal projetada com contraste refinado, tipografia focada na legibilidade e foco na conversão imediata do usuário para conhecer o projeto.*
 
 ### 📄 2. Página Institucional (Sobre)
-![Demonstração da Página Sobre](src/assets/sobre1.png)
+![Demonstração da Página Sobre](src/assets/sobre.png)
 *Legenda: Apresentação do contexto e problema, os tipos de solução e um roadmap de desenvolvimento.*
 
 ### 🚀 3. Detalhamento da Funcionalidade (Solução)
-![Demonstração da Página de Solução](src/assets/solucao1.png)
+![Demonstração da Página de Solução](src/assets/solucao.png)
 *Legenda: Explicação detalhada do ecossistema de gamificação, regras e a dinâmica de pontuação.*
 
 ### 📱 4. Componente de FAQ Expandido (FAQ)
-![Demonstração do FAQ Responsivo](src/assets/faq1.png)
+![Demonstração do FAQ Responsivo](src/assets/faq.png)
 *Legenda: Menu do tipo Accordion tratando quebras de linhas de forma fluida por meio de componentes React e manipulação dinâmica do estado.*
 
 ### 👥 5. Página do Time (Integrantes)
-![Demonstração da Página de Integrantes](src/assets/integrantes1.png)
+![Demonstração da Página de Integrantes](src/assets/integrantes.png)
 *Legenda: Grid responsivo exibindo os cartões dos desenvolvedores com fotos customizadas e links integrados para redes profissionais.*
 
 ### ✉️ 6. Canal de Atendimento e Feedback (Contato)

@@ -27,23 +27,25 @@ export default function Home() {
     <main className="w-full max-w-6xl mx-auto px-4 py-12 flex flex-col items-center">
       
       <section aria-labelledby="hero-title" className="text-center max-w-4xl mx-auto mb-20">
-        <h1
-          id="hero-title"
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight mb-6"
-        >
-          Tecnologia com rastro de inovação e sustentabilidade
-        </h1>
+        <div className="relative z-10 bg-[#fffbed]/90 rounded-2xl px-6 py-6 md:px-10 md:py-8">
+          <h1
+            id="hero-title"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-stone-900 tracking-tight mb-6"
+          >
+            Tecnologia com rastro de inovação e sustentabilidade
+          </h1>
 
-        <p className="text-stone-700 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
-          Transformamos ações sustentáveis em recompensas reais unindo gamificação, tecnologia e hábitos sustentáveis.
-        </p>
+          <p className="text-stone-700 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+            Transformamos ações sustentáveis em recompensas reais unindo gamificação, tecnologia e hábitos sustentáveis.
+          </p>
 
-        <Link
-          to="/sobre"
-          className="wave-button inline-flex items-center justify-center px-8 py-3 rounded-lg bg-[#D35400] hover:bg-[#b84500] text-white font-bold shadow-sm transition-colors"
-        >
-          Conheça o Projeto
-        </Link>
+          <Link
+            to="/sobre"
+            className="wave-button inline-flex items-center justify-center px-8 py-3 rounded-lg bg-[#D35400] hover:bg-[#b84500] text-white font-bold shadow-sm transition-colors"
+          >
+            Conheça o Projeto
+          </Link>
+        </div>
       </section>
 
       
