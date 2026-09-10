@@ -42,14 +42,10 @@ export default function FaqItem({
         id={`faq-resp-${indice}`}
         role="region"
         aria-labelledby={`faq-btn-${indice}`}
-        className={`grid transition-all duration-300 ease-in-out ${
-          estaAberto ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-        }`}
+        hidden={!estaAberto}
       >
-        <div className="overflow-hidden">
-          <div className="px-5 pb-5 text-stone-600 text-sm leading-relaxed border-t border-stone-100 pt-3">
-            <p>{resposta}</p>
-          </div>
+        <div className="px-5 pb-5 text-stone-600 text-sm leading-relaxed border-t border-stone-100 pt-3">
+          <p>{resposta}</p>
         </div>
       </div>
     </article>

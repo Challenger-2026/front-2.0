@@ -13,12 +13,28 @@ Para a construção desta aplicação moderna, responsiva e fluida, foram utiliz
 * **React:** construção da interface como Single Page Application (SPA), com componentes reutilizáveis, gerenciamento de estado e renderização dinâmica das páginas (Home, Sobre, Solução, FAQ, Integrantes e Contato).
 * **TypeScript:** tipagem estática do código, garantindo mais segurança, previsibilidade e facilidade de manutenção durante a evolução do projeto.
 * **Vite:** ferramenta de build e servidor de desenvolvimento, responsável pela compilação rápida, hot reload e empacotamento otimizado da aplicação.
+* **Tailwind CSS:** classes de estilo usadas nos componentes.
 * **CSS3:** estilização global da interface (index.css), fazendo uso de:
-    * Variáveis CSS (Custom Properties) para controle estrito da paleta de cores (regra 60-30-10);
+    * Classes CSS para as cores, o papel de parede e as animações;
     * Flexbox e Grid Layout para alinhamento dinâmico e organização em cards;
-    * Media Queries aplicadas cirurgicamente para total responsividade em smartphones e tablets.
+    * Media queries para adaptar o layout a celulares e tablets.
 * **JavaScript (via React):** manipulação dinâmica do DOM e gerenciamento de estado para o funcionamento interativo do sistema de **Accordion** na página de FAQ, controlando estados de expansão e animação do conteúdo, e para a página de Contato, na verificação das informações passadas pelo formulário.
 * **Git e GitHub:** controle de versionamento, histórico de evolução e publicação do repositório.
+
+## Como executar e verificar
+
+```bash
+npm install
+npm run dev
+```
+
+Para conferir os tipos e gerar a versão final, use `npm run build`. Para verificar as regras de código, use `npm run lint`.
+
+O projeto usa componentes, propriedades, listas com `map`, condições, `useState` e `useEffect`. As rotas ficam no `App.tsx`. O FAQ abre e fecha com o atributo HTML `hidden`, e as animações ficam no `index.css`.
+
+**Contato:** o formulário é uma demonstração com React Hook Form. Ele valida nome, e-mail e mensagem, mas ainda não envia nem salva os dados. O texto preenchido permanece disponível depois da validação.
+
+Para conferir as interações, navegue pelas páginas, abra e feche as perguntas do FAQ, selecione integrantes com mouse e teclado e teste o formulário com campos vazios, espaços e dados válidos. Confira também o layout em celular e desktop.
 
 ## 📂 Estrutura de Pastas do Projeto
 
@@ -129,7 +145,7 @@ Abaixo estão as representações visuais das telas que compõem a plataforma, d
 
 ### ✉️ 6. Canal de Atendimento e Feedback (Contato)
 ![Demonstração da Página de Contato](src/assets/contato.png)
-*Legenda: Formulário estruturado com validação de campos para captação de mensagens de usuários e potenciais parceiros ESG.*
+*Legenda: Formulário de demonstração com validação de campos, ainda sem envio de mensagens.*
 
 ## 🔗 Link do Repositório
 
@@ -142,4 +158,3 @@ O código-fonte completo, histórico de evoluções e versionamento estruturado 
 Para esclarecimento de dúvidas técnicas sobre as mecânicas de gamificação, feedbacks sobre a arquitetura responsiva ou propostas de parcerias institucionais ESG, entre em contato através dos canais:
 
 * **E-mail de Suporte:** contato@loboguaratech.com.br
-```

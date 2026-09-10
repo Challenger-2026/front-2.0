@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import CardPilar from '../components/CardPilar';
 
 export interface CardSolucao {
@@ -78,11 +77,6 @@ const listaEtapas: EtapaRanking[] = [
 ];
 
 export default function Solucao() {
-  useEffect(() => {
-    document.title = 'Nossa Solução | Lobo-guará Tech';
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <main className="w-full max-w-6xl mx-auto px-4 py-12 flex flex-col items-center">
       {/* Apresentação do Ecossistema */}

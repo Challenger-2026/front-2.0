@@ -1,8 +1,4 @@
-interface TimelineItemProps {
-  numero: number;
-  titulo: string;
-  descricao: string;
-}
+import type { TimelineItemProps } from '../types/types';
 
 export default function TimelineItem({ numero, titulo, descricao }: TimelineItemProps) {
   return (

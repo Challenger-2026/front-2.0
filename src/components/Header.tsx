@@ -13,18 +13,19 @@ export default function Header({ titulo }: CabecalhoProps) {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-stone-900 text-amber-50 px-4 sm:px-6 py-3 sm:py-4 shadow-md">
+    <header className="site-header sticky top-0 z-50 px-4 sm:px-6 py-3 sm:py-4">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-3 sm:gap-4">
         
         <Link to="/" className="flex items-center gap-3 shrink-0">
           <img
             src={logoGuara}
             alt={`Logo ${titulo}`}
-            className="w-9 h-9 sm:w-10 sm:h-10 object-contain shrink-0"
+            className="w-12 h-12 sm:w-14 sm:h-14 object-contain shrink-0"
           />
-          <h1 className="text-lg sm:text-xl font-bold text-orange-500 whitespace-nowrap">
-            {titulo}
-          </h1>
+          <div>
+            <p className="text-lg sm:text-xl font-extrabold text-[#a84312]">{titulo}</p>
+            <p className="text-xs text-[#35685b]">Tecnologia que cuida do amanhã</p>
+          </div>
         </Link>
 
         <nav
@@ -37,10 +38,10 @@ export default function Header({ titulo }: CabecalhoProps) {
               to={item.path}
               end={item.path === '/'}
               className={({ isActive }) =>
-                `wave-button text-xs sm:text-sm font-semibold whitespace-nowrap transition-colors py-1 ${
+                `wave-button nav-link text-xs sm:text-sm font-bold whitespace-nowrap ${
                   isActive
-                    ? 'text-orange-500 font-bold border-b-2 border-orange-500'
-                    : 'text-amber-50 hover:text-orange-400'
+                    ? 'nav-link-active'
+                    : ''
                 }`
               }
             >

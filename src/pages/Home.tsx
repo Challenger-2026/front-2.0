@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import CardMini, { type CardMiniProps } from '../components/CardMini';
-import Botao from '../components/Botao';
 
 const listaResumo: CardMiniProps[] = [
   {
@@ -39,11 +38,11 @@ export default function Home() {
           Transformamos ações sustentáveis em recompensas reais unindo gamificação, tecnologia e hábitos sustentáveis.
         </p>
 
-        {/* Reutilização do componente Botao */}
-        <Link to="/sobre">
-          <Botao variante="primario" className="px-8 py-3 text-base">
-            Conheça o Projeto
-          </Botao>
+        <Link
+          to="/sobre"
+          className="wave-button inline-flex items-center justify-center px-8 py-3 rounded-lg bg-[#D35400] hover:bg-[#b84500] text-white font-bold shadow-sm transition-colors"
+        >
+          Conheça o Projeto
         </Link>
       </section>
 

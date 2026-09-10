@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import TimelineItem from '../components/TimelineItem';
 
 export interface CardSolucaoItem {
@@ -62,11 +61,6 @@ const etapasRoadmap: EtapaRoadmap[] = [
 ];
 
 export default function Sobre() {
-  useEffect(() => {
-    document.title = 'Sobre Nós | Lobo-guará Tech';
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <main className="w-full max-w-5xl mx-auto px-4 py-10 space-y-16">
       {/* Contexto e Problema */}

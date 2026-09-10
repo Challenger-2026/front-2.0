@@ -1,18 +1,18 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import type { FormContatoInputs } from '../types/types';
 import Botao from '../components/Botao';
 
 export default function Contato() {
+  const [mensagemValidada, setMensagemValidada] = useState(false);
   const {
     register,
     handleSubmit,
-    reset,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors },
   } = useForm<FormContatoInputs>();
 
-  function onSubmit(data: FormContatoInputs) {
-    console.log('Mensagem enviada com sucesso:', data);
-    reset();
+  function validarMensagem() {
+    setMensagemValidada(true);
   }
 
   return (
@@ -22,32 +22,48 @@ export default function Contato() {
         <div>
           <h1 className="text-3xl font-extrabold text-orange-600 mb-2">Fale Conosco</h1>
           <p className="text-stone-700 text-sm leading-relaxed">
-            Conecte-se com a Lobo-guará Tech! Tem dúvidas sobre como funcionam os rankings e medalhas?
-            Ou quer saber como sua empresa pode se tornar parceira do nosso ecossistema sustentável?
-            Use o canal ao lado para falar diretamente conosco. Estamos prontos para responder suas
-            perguntas ou co-criar soluções inovadoras para o planeta.
+            Conecte-se com a Lobo-guará Tech! Tem dúvidas sobre como funcionam os rankings e
+            medalhas? Ou quer saber como sua empresa pode se tornar parceira do nosso ecossistema
+            sustentável? Confira nossos canais de contato ou experimente o formulário de
+            demonstração.
           </p>
         </div>
 
         <address className="not-italic bg-stone-900 text-amber-50 p-6 rounded-xl space-y-2 text-sm shadow-sm">
-          <p><strong className="text-white">E-mail:</strong> contato@loboguaratech.com.br</p>
-          <p><strong className="text-white">Telefone:</strong> (11) 4002-8922</p>
-          <p><strong className="text-white">Localização:</strong> São Paulo, SP - FIAP</p>
+          <p className="break-words">
+            <strong className="text-white">E-mail:</strong> contato@loboguaratech.com.br
+          </p>
+          <p>
+            <strong className="text-white">Telefone:</strong> (11) 4002-8922
+          </p>
+          <p>
+            <strong className="text-white">Localização:</strong> São Paulo, SP - FIAP
+          </p>
         </address>
       </div>
 
       {/* Formulário com React Hook Form */}
       <div className="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm">
-        {isSubmitSuccessful && (
+        <p id="aviso-formulario" className="mb-5 text-sm text-stone-600">
+          Formulário de demonstração: os campos são validados, mas a mensagem ainda não é enviada.
+        </p>
+
+        {mensagemValidada && (
           <p
             role="status"
             className="mb-5 p-3.5 bg-green-50 border border-green-200 text-green-800 rounded-lg text-sm font-semibold"
           >
-            Mensagem enviada com sucesso! Obrigado pelo contato.
+            Dados válidos! Esta demonstração não envia mensagens.
           </p>
         )}
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
+        <form
+          onSubmit={handleSubmit(validarMensagem)}
+          onChange={() => setMensagemValidada(false)}
+          aria-describedby="aviso-formulario"
+          className="space-y-4"
+          noValidate
+        >
           {/* Campo Nome */}
           <div>
             <label htmlFor="nome" className="block text-sm font-bold text-stone-900 mb-1">
@@ -56,9 +72,13 @@ export default function Contato() {
             <input
               id="nome"
               type="text"
+              autoComplete="name"
+              required
               placeholder="Seu nome aqui"
               aria-invalid={errors.nome ? 'true' : 'false'}
+              aria-describedby={errors.nome ? 'erro-nome' : undefined}
               {...register('nome', {
+                setValueAs: (valor: string) => valor.trim(),
                 required: 'Por favor, informe seu nome completo.',
                 minLength: {
                   value: 3,
@@ -70,7 +90,7 @@ export default function Contato() {
               }`}
             />
             {errors.nome && (
-              <span className="text-xs text-red-600 mt-1 block font-medium">
+              <span id="erro-nome" className="text-xs text-red-600 mt-1 block font-medium">
                 {errors.nome.message}
               </span>
             )}
@@ -84,9 +104,13 @@ export default function Contato() {
             <input
               id="email"
               type="email"
+              autoComplete="email"
+              required
               placeholder="email@exemplo.com"
               aria-invalid={errors.email ? 'true' : 'false'}
+              aria-describedby={errors.email ? 'erro-email' : undefined}
               {...register('email', {
+                setValueAs: (valor: string) => valor.trim(),
                 required: 'O e-mail é obrigatório.',
                 pattern: {
                   value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i,
@@ -100,7 +124,7 @@ export default function Contato() {
               }`}
             />
             {errors.email && (
-              <span className="text-xs text-red-600 mt-1 block font-medium">
+              <span id="erro-email" className="text-xs text-red-600 mt-1 block font-medium">
                 {errors.email.message}
               </span>
             )}
@@ -114,9 +138,12 @@ export default function Contato() {
             <textarea
               id="mensagem"
               rows={4}
+              required
               placeholder="Como podemos ajudar?"
               aria-invalid={errors.mensagem ? 'true' : 'false'}
+              aria-describedby={errors.mensagem ? 'erro-mensagem' : undefined}
               {...register('mensagem', {
+                setValueAs: (valor: string) => valor.trim(),
                 required: 'A mensagem é obrigatória.',
                 minLength: {
                   value: 10,
@@ -130,14 +157,14 @@ export default function Contato() {
               }`}
             />
             {errors.mensagem && (
-              <span className="text-xs text-red-600 mt-1 block font-medium">
+              <span id="erro-mensagem" className="text-xs text-red-600 mt-1 block font-medium">
                 {errors.mensagem.message}
               </span>
             )}
           </div>
 
           <Botao tipo="submit" className="w-full sm:w-auto">
-            Enviar Mensagem
+            Validar Mensagem
           </Botao>
         </form>
       </div>

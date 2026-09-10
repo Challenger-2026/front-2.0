@@ -15,7 +15,7 @@ export type IntegranteProps = {
   linkedin: string;
   github: string;
   funcao?: string;
-  contribuicao?: string | string[]; 
+  contribuicao?: string[];
 };
 
 export type FormContatoInputs = {
@@ -29,21 +29,8 @@ export type FaqItemType = {
   resposta: string;
 };
 
-export type PilarSolucaoType = {
-  id: string;
-  icone?: string;
-  titulo: string;
-  descricao: string;
-};
-
 export type TimelineItemProps = {
   numero: number;
-  titulo: string;
-  descricao: string;
-};
-
-export type ResumoProjeto = {
-  icone: string;
   titulo: string;
   descricao: string;
 };

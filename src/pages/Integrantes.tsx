@@ -40,7 +40,7 @@ const listaIntegrantes: IntegranteProps[] = [
     linkedin: 'https://www.linkedin.com/in/duduulimatech/',
   },
   {
-    nome: 'Lucas Costa Serrano ',
+    nome: 'Lucas Costa Serrano',
     rm: '571016',
     turma: '1TDSPI',
     foto: foto3,
@@ -87,10 +87,10 @@ export default function Integrantes() {
   const { rm } = useParams<{ rm?: string }>();
   const navigate = useNavigate();
 
-  // Estado derivado diretamente do parâmetro de rota (elimina cascading render)
-  const selecionado = listaIntegrantes.find((item) => item.rm === rm) ?? null;
+  // Procura o integrante pelo RM informado no endereço da página.
+  const selecionado = listaIntegrantes.find((item) => item.rm === rm);
 
-  // Efeito colateral exclusivo para sincronizar o título da aba no navegador
+  // Atualiza o título da aba com o nome do integrante selecionado.
   useEffect(() => {
     document.title = selecionado
       ? `${selecionado.nome} | Lobo-guará Tech`
@@ -101,88 +101,87 @@ export default function Integrantes() {
     <main className="w-full max-w-7xl mx-auto px-4 py-6 text-center">
       <h1 className="text-3xl font-bold text-orange-600 mb-3">Nossa Equipe</h1>
       <p className="text-stone-700 text-sm max-w-3xl mx-auto leading-relaxed mb-8">
-        A Lobo-guará Tech nasceu com o propósito de unir a inovação tecnológica da Sociedade 5.0 à urgência da preservação ambiental. Nosso objetivo é transformar hábitos ecológicos do dia a dia em uma experiência engajadora e recompensadora através da gamificação. Acreditamos que o desenvolvimento de sistemas deve servir ao bem-estar planetário, provando que linhas de código podem ser ferramentas ativas para proteger nossa biodiversidade e construir um futuro sustentável.
+        A Lobo-guará Tech nasceu com o propósito de unir a inovação tecnológica da Sociedade 5.0 à
+        urgência da preservação ambiental. Nosso objetivo é transformar hábitos ecológicos do dia a
+        dia em uma experiência engajadora e recompensadora através da gamificação. Acreditamos que o
+        desenvolvimento de sistemas deve servir ao bem-estar planetário, provando que linhas de
+        código podem ser ferramentas ativas para proteger nossa biodiversidade e construir um futuro
+        sustentável.
       </p>
 
+      {rm && !selecionado && (
+        <p role="status" className="mb-6 text-orange-800">
+          Integrante não encontrado. Escolha uma pessoa da equipe abaixo.
+        </p>
+      )}
+
       {selecionado && (
-          <article className="max-w-xl mx-auto mb-12 p-6 sm:p-8 bg-white border-2 border-orange-500 rounded-2xl shadow-lg flex flex-col items-center transition-all duration-300 animate-fade-in text-center">
-            <span className="text-xs font-bold text-orange-600 uppercase tracking-widest mb-3">Integrante em Destaque</span>
+        <article className="max-w-xl mx-auto mb-12 p-6 sm:p-8 bg-white border-2 border-orange-500 rounded-2xl shadow-lg flex flex-col items-center transition-all duration-300 animate-fade-in text-center">
+          <span className="text-xs font-bold text-orange-600 uppercase tracking-widest mb-3">
+            Integrante em Destaque
+          </span>
 
-            <img
-              src={selecionado.foto}
-              alt={`Foto de ${selecionado.nome}`}
-              className="w-28 h-28 rounded-full object-cover border-4 border-orange-500 mb-3 shadow"
-            />
+          <img
+            src={selecionado.foto}
+            alt={`Foto de ${selecionado.nome}`}
+            className="w-28 h-28 rounded-full object-cover border-4 border-orange-500 mb-3 shadow"
+          />
 
-            <h2 className="text-2xl font-bold text-stone-900">{selecionado.nome}</h2>
-            
-            <span className="text-xs font-semibold bg-orange-100 text-orange-800 px-3 py-1 rounded-full mt-1 mb-2">
-              {selecionado.funcao || 'Membro do Projeto'}
-            </span>
+          <h2 className="text-2xl font-bold text-stone-900">{selecionado.nome}</h2>
 
-            <p className="text-stone-500 text-xs sm:text-sm mb-4">RM: {selecionado.rm} • Turma: {selecionado.turma}</p>
+          <span className="text-xs font-semibold bg-orange-100 text-orange-800 px-3 py-1 rounded-full mt-1 mb-2">
+            {selecionado.funcao || 'Membro do Projeto'}
+          </span>
 
-            
+          <p className="text-stone-500 text-xs sm:text-sm mb-4">
+            RM: {selecionado.rm} • Turma: {selecionado.turma}
+          </p>
+
           {selecionado.contribuicao && (
             <div className="bg-stone-50 border border-stone-200 rounded-xl p-4 mb-6 w-full text-stone-700 text-xs sm:text-sm text-left">
-              <strong className="text-stone-900 block mb-2 font-bold">Contribuição no Projeto:</strong>
-              <ul className="space-y-1.5">
-                {[selecionado.contribuicao].flat().map((item, idx) => (
-                  <li key={idx} className="flex gap-2">
-                    <span className="text-orange-600 font-bold">•</span>
-                    <span>
-                      {item.includes(':') ? (
-                        <><strong>{item.split(':')[0]}:</strong>{item.slice(item.indexOf(':') + 1)}</>
-                      ) : item}
-                    </span>
-                  </li>
+              <strong className="text-stone-900 block mb-2 font-bold">
+                Contribuição no Projeto:
+              </strong>
+              <ul className="list-disc pl-5 space-y-2">
+                {selecionado.contribuicao.map((item) => (
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
             </div>
-          
           )}
 
-    
-      <div className="flex items-center justify-center gap-3 w-full mb-6">
-        <a
-          href={selecionado.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`GitHub de ${selecionado.nome}`}
-          className="wave-button flex-1 py-2 px-4 rounded-lg bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold transition-colors duration-200"
-        >
-          GitHub
-        </a>
-        <a
-          href={selecionado.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={`LinkedIn de ${selecionado.nome}`}
-          className="wave-button flex-1 py-2 px-4 rounded-lg bg-[#0077b5] hover:bg-[#006097] text-white text-xs font-semibold transition-colors duration-200"
-        >
-          LinkedIn
-        </a>
-      </div>
+          <div className="flex items-center justify-center gap-3 w-full mb-6">
+            <a
+              href={selecionado.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`GitHub de ${selecionado.nome}`}
+              className="wave-button flex-1 py-2 px-4 rounded-lg bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold transition-colors duration-200"
+            >
+              GitHub
+            </a>
+            <a
+              href={selecionado.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`LinkedIn de ${selecionado.nome}`}
+              className="wave-button flex-1 py-2 px-4 rounded-lg bg-[#0077b5] hover:bg-[#006097] text-white text-xs font-semibold transition-colors duration-200"
+            >
+              LinkedIn
+            </a>
+          </div>
 
-      <Botao acao={() => navigate('/integrantes')} variante="secundario">Limpar Destaque </Botao>
-    </article>
-  )}
+          <Botao acao={() => navigate('/integrantes')} variante="secundario">
+            Limpar Destaque
+          </Botao>
+        </article>
+      )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 justify-items-center items-stretch">
         {listaIntegrantes.map((integrante) => (
           <div
             key={integrante.rm}
-            role="button"
-            tabIndex={0}
-            aria-label={`Ver detalhes de ${integrante.nome}`}
-            onClick={() => navigate(`/integrantes/${integrante.rm}`)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                navigate(`/integrantes/${integrante.rm}`);
-              }
-            }}
-            className="w-full max-w-[220px] h-full flex flex-col cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] active:scale-95 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-xl"
+            className="w-full max-w-[220px] h-full flex flex-col transition-transform duration-300 hover:-translate-y-2 rounded-xl"
           >
             <CardIntegrante
               nome={integrante.nome}
