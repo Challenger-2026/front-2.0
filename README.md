@@ -41,7 +41,7 @@ Para conferir as interações, navegue pelas páginas, abra e feche as perguntas
 Abaixo está representada a arquitetura limpa de diretórios do repositório, seguindo o padrão de projetos React + TypeScript com Vite, garantindo organização e fácil manutenção do código-fonte:
 
 ```text
-front-2.0-main/
+front-2.0/
 ├── public/
 │   └── favicon.svg              # Ícone da aba do navegador
 │
@@ -109,7 +109,7 @@ O desenvolvimento deste projeto foi idealizado e executado pela equipe de estuda
   *Turma: 1TDSPI* 👉 [LinkedIn](https://www.linkedin.com/in/ana-bautzer/) | 👉 [GitHub](https://github.com/anabautzer)
 
 * **Eduardo Lima de Souza** — RM 570412
-  *Turma: 1TDSPI* 👉 [LinkedIn](https://www.linkedin.com/in/duduutech/) | 👉 [GitHub](https://github.com/duduutech)
+  *Turma: 1TDSPI* 👉 [LinkedIn](https://www.linkedin.com/in/duduulimatech/) | 👉 [GitHub](https://github.com/duduutech)
 
 * **Lucas Costa Serrano** — RM 571016
   *Turma: 1TDSPI* 👉 [LinkedIn](https://www.linkedin.com/in/lucas-costa-serrano-647327278/) | 👉 [GitHub](https://github.com/luckz4)
