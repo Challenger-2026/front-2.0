@@ -148,11 +148,13 @@ Abaixo estão as representações visuais das telas que compõem a plataforma, d
 ![Demonstração da Página de Contato](src/assets/contato.png)
 *Legenda: Formulário de demonstração com validação de campos, ainda sem envio de mensagens.*
 
-## 🔗 Link do Repositório
+## 🔗 Link do Repositório e Vídeo
 
-O código-fonte completo, histórico de evoluções e versionamento estruturado deste ecossistema web podem ser acessados publicamente no GitHub através do link oficial:
+O código-fonte completo, histórico de evoluções e versionamento estruturado deste ecossistema web podem ser acessados publicamente no GitHub através do link oficial e para visualização da página e explicação, o link para o YouTube:
 
 🚀 **[Acesse o Repositório Oficial no GitHub](https://github.com/Challenger-2026/front-2.0)**
+
+📹 **[Acesse o link para vídeo no YouTube](https://youtu.be/OwPp8j7qkXU)**
 
 ## 📞 Contato e Suporte
 
