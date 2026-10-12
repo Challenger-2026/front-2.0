@@ -31,7 +31,9 @@ export default function Faq() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-8">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-orange-600 mb-2">Perguntas Frequentes</h1>
+        <h1 className="text-3xl font-extrabold text-[#a84312] mb-2">
+          Perguntas Frequentes
+        </h1>
         <p className="text-stone-600 text-sm">
           Tire suas dúvidas sobre nossa plataforma e impacto sustentável.
         </p>
@@ -40,7 +42,7 @@ export default function Faq() {
       <div className="space-y-4">
         {listaFaq.map((item, index) => (
           <FaqItem
-            key={index}
+            key={item.pergunta}
             indice={index}
             pergunta={item.pergunta}
             resposta={item.resposta}

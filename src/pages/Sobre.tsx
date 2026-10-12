@@ -44,7 +44,7 @@ const etapasRoadmap: EtapaRoadmap[] = [
     numero: 1,
     titulo: 'Definição do problema',
     descricao:
-      'Buscamos solucionar a lacuna de transformar ações sustentáveis, em um sistema de recompensa e desafios, com rankeamento, atingindo o usuário e seu ciclo de engajamento, pensando em seus objetivos e motivações.',
+      'Buscamos solucionar a lacuna de transformar ações sustentáveis em um sistema de recompensa e desafios com rankeamento, atingindo o usuário e seu ciclo de engajamento, pensando em seus objetivos e motivações.',
   },
   {
     numero: 2,
@@ -65,13 +65,13 @@ export default function Sobre() {
     <main className="w-full max-w-5xl mx-auto px-4 py-10 space-y-16">
       {/* Contexto e Problema */}
       <section aria-labelledby="contexto-title" className="space-y-4">
-        <div className="relative z-10 inline-block bg-[#fffbed]/90 rounded-xl px-4 py-2">
+        <div className="relative z-10 inline-block bg-[#fffbed]/90 rounded-2xl px-5 py-3 border border-[#ead9b6]/40 shadow-sm">
           <span className="text-xs font-bold tracking-widest text-[#D35400] uppercase block mb-1">
             O Desafio
           </span>
           <h1
             id="contexto-title"
-            className="text-3xl font-extrabold text-stone-900 pb-2 border-b-2 border-[#D35400] inline-block"
+            className="text-2xl sm:text-3xl font-extrabold text-stone-900 pb-1 border-b-2 border-[#D35400] inline-block"
           >
             Contexto e o Problema
           </h1>
@@ -103,15 +103,15 @@ export default function Sobre() {
         </div>
       </section>
 
-      
+
       <section aria-labelledby="solucao-title" className="space-y-6">
-        <div className="relative z-10 inline-block bg-[#fffbed]/90 rounded-xl px-4 py-2">
+        <div className="relative z-10 inline-block bg-[#fffbed]/90 rounded-2xl px-5 py-3 border border-[#ead9b6]/40 shadow-sm">
           <span className="text-xs font-bold tracking-widest text-[#D35400] uppercase block mb-1">
             Nossa Resposta
           </span>
           <h2
             id="solucao-title"
-            className="text-3xl font-extrabold text-stone-900 pb-2 border-b-2 border-[#D35400] inline-block"
+            className="text-2xl sm:text-3xl font-extrabold text-stone-900 pb-1 border-b-2 border-[#D35400] inline-block"
           >
             A Solução Lobo-guará Tech
           </h2>
@@ -121,7 +121,7 @@ export default function Sobre() {
           {cardsSolucao.map((item) => (
             <article
               key={item.numero}
-              className="bg-white rounded-2xl p-6 shadow-sm border-b-4 border-[#D35400] border-t border-l border-r border-stone-100 flex flex-col text-left"
+              className="bg-white rounded-2xl p-6 shadow-sm border-b-4 border-[#D35400] border-t border-l border-r border-stone-100 flex flex-col text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
             >
               <span className="text-xs font-bold text-[#D35400] bg-orange-50 px-2.5 py-1 rounded-md w-fit mb-4">
                 {item.numero}
@@ -133,15 +133,15 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* Linha do Tempo e Roadmap */}
+ 
       <section aria-labelledby="roadmap-title" className="space-y-6">
-        <div className="relative z-10 inline-block bg-[#fffbed]/90 rounded-xl px-4 py-2">
+        <div className="relative z-10 inline-block bg-[#fffbed]/90 rounded-2xl px-5 py-3 border border-[#ead9b6]/40 shadow-sm">
           <span className="text-xs font-bold tracking-widest text-[#D35400] uppercase block mb-1">
             Próximos Passos
           </span>
           <h2
             id="roadmap-title"
-            className="text-3xl font-extrabold text-stone-900 pb-2 border-b-2 border-[#D35400] inline-block"
+            className="text-2xl sm:text-3xl font-extrabold text-stone-900 pb-1 border-b-2 border-[#D35400] inline-block"
           >
             Roadmap de Desenvolvimento
           </h2>

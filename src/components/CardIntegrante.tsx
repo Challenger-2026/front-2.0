@@ -11,9 +11,13 @@ export default function CardIntegrante({
   github,
   linkedin,
 }: IntegranteProps) {
+
+  const efeitoOnda =
+    "relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:z-[1] after:pointer-events-none after:rounded-t-[45%] after:bg-amber-400/20 after:translate-y-full after:transition-transform after:duration-500 hover:after:translate-y-[10%] active:after:translate-y-[10%]";
+
   return (
     <article className="group w-full h-full bg-white border border-stone-200 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-lg hover:border-orange-600 transition-all duration-300 flex flex-col items-center text-center">
-      {/* O link do perfil fica separado dos links das redes sociais. */}
+   
       <Link
         to={`/integrantes/${rm}`}
         aria-label={`Ver detalhes de ${nome}`}
@@ -51,7 +55,7 @@ export default function CardIntegrante({
           rel="noopener noreferrer"
           aria-label={`GitHub de ${nome}`}
           title="GitHub"
-          className="wave-button py-2.5 bg-stone-900 hover:bg-black rounded-xl transition-all shadow-sm active:scale-95 flex items-center justify-center border border-stone-800"
+          className={`${efeitoOnda} py-2.5 bg-stone-900 hover:bg-black rounded-xl transition-all shadow-sm active:scale-95 flex items-center justify-center border border-stone-800`}
         >
           <img src={iconeGithub} alt="GitHub" className="w-5 h-5 brightness-0 invert" />
         </a>
@@ -62,7 +66,7 @@ export default function CardIntegrante({
           rel="noopener noreferrer"
           aria-label={`LinkedIn de ${nome}`}
           title="LinkedIn"
-          className="wave-button py-2.5 bg-[#0A66C2] hover:bg-[#084e96] rounded-xl transition-all shadow-sm active:scale-95 flex items-center justify-center border border-[#0A66C2]"
+          className={`${efeitoOnda} py-2.5 bg-[#0A66C2] hover:bg-[#084e96] rounded-xl transition-all shadow-sm active:scale-95 flex items-center justify-center border border-[#0A66C2]`}
         >
           <img src={iconeLinkedin} alt="LinkedIn" className="w-5 h-5 brightness-0 invert" />
         </a>

@@ -13,7 +13,6 @@ import Sobre from './pages/Sobre';
 function Rotas() {
   const location = useLocation();
 
-  // Toda troca de página começa no topo e atualiza o título da aba.
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -56,7 +55,8 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className="site min-h-screen flex flex-col text-stone-900">
+   
+      <div className="relative isolate min-h-screen flex flex-col bg-[#fffbed] text-stone-900 before:content-[''] before:fixed before:inset-0 before:-z-10 before:pointer-events-none before:bg-[url('./assets/papel-fundo.jpg')] before:bg-no-repeat before:bg-center before:bg-cover portrait:before:bg-bottom portrait:before:bg-[length:100%_auto]">
         <Header titulo={nomeProjeto} />
 
         <div className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

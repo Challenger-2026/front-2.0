@@ -87,10 +87,11 @@ export default function Integrantes() {
   const { rm } = useParams<{ rm?: string }>();
   const navigate = useNavigate();
 
-  // Procura o integrante pelo RM informado no endereço da página.
   const selecionado = listaIntegrantes.find((item) => item.rm === rm);
 
-  // Atualiza o título da aba com o nome do integrante selecionado.
+  const efeitoOnda =
+    "relative overflow-hidden after:content-[''] after:absolute after:inset-0 after:z-[1] after:pointer-events-none after:rounded-t-[45%] after:bg-amber-400/20 after:translate-y-full after:transition-transform after:duration-500 hover:after:translate-y-[10%] active:after:translate-y-[10%]";
+
   useEffect(() => {
     document.title = selecionado
       ? `${selecionado.nome} | Lobo-guará Tech`
@@ -99,8 +100,9 @@ export default function Integrantes() {
 
   return (
     <main className="w-full max-w-7xl mx-auto px-4 py-6 text-center">
-      <h1 className="text-3xl font-bold text-orange-600 mb-3">Nossa Equipe</h1>
-      <p className="equipe-intro text-stone-700 text-sm max-w-3xl mx-auto leading-relaxed mb-8">
+      <h1 className="text-3xl font-extrabold text-[#a84312] mb-3">Nossa Equipe</h1>
+
+      <p className="max-w-3xl mx-auto mb-10 py-6 px-6 sm:px-8 bg-[#fffdf5]/95 rounded-2xl relative z-10 text-stone-700 text-sm leading-relaxed border border-[#ead9b6]/40 shadow-sm">
         A Lobo-guará Tech nasceu com o propósito de unir a inovação tecnológica da Sociedade 5.0 à
         urgência da preservação ambiental. Nosso objetivo é transformar hábitos ecológicos do dia a
         dia em uma experiência engajadora e recompensadora através da gamificação. Acreditamos que o
@@ -110,14 +112,14 @@ export default function Integrantes() {
       </p>
 
       {rm && !selecionado && (
-        <p role="status" className="mb-6 text-orange-800">
+        <p role="status" className="mb-6 text-[#a84312] font-semibold">
           Integrante não encontrado. Escolha uma pessoa da equipe abaixo.
         </p>
       )}
 
       {selecionado && (
         <article className="max-w-xl mx-auto mb-12 p-6 sm:p-8 bg-white border-2 border-orange-500 rounded-2xl shadow-lg flex flex-col items-center transition-all duration-300 animate-fade-in text-center">
-          <span className="text-xs font-bold text-orange-600 uppercase tracking-widest mb-3">
+          <span className="text-xs font-bold text-[#a84312] uppercase tracking-widest mb-3">
             Integrante em Destaque
           </span>
 
@@ -134,7 +136,8 @@ export default function Integrantes() {
           </span>
 
           <p className="text-stone-500 text-xs sm:text-sm mb-4">
-            RM: {selecionado.rm} • Turma: {selecionado.turma}
+            <strong className="text-stone-700">RM:</strong> {selecionado.rm} &bull;{' '}
+            <strong className="text-stone-700">Turma:</strong> {selecionado.turma}
           </p>
 
           {selecionado.contribuicao && (
@@ -156,7 +159,7 @@ export default function Integrantes() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`GitHub de ${selecionado.nome}`}
-              className="wave-button flex-1 py-2 px-4 rounded-lg bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold transition-colors duration-200"
+              className={`${efeitoOnda} flex-1 py-2.5 px-4 rounded-xl bg-stone-900 hover:bg-black text-white text-xs font-semibold transition-colors duration-200`}
             >
               GitHub
             </a>
@@ -165,7 +168,7 @@ export default function Integrantes() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`LinkedIn de ${selecionado.nome}`}
-              className="wave-button flex-1 py-2 px-4 rounded-lg bg-[#0077b5] hover:bg-[#006097] text-white text-xs font-semibold transition-colors duration-200"
+              className={`${efeitoOnda} flex-1 py-2.5 px-4 rounded-xl bg-[#0A66C2] hover:bg-[#084e96] text-white text-xs font-semibold transition-colors duration-200`}
             >
               LinkedIn
             </a>
